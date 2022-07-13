@@ -1,0 +1,32 @@
+*{
+  font-family: 'Montserrat', sans-serif;
+}
+.divone{
+    margin-top: 5%;
+}
+.txtone{
+  margin-top: 5%;
+  font-size: 1px;
+}
+.butone{
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.mainone {
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: center;
+  border-style:solid;
+  border-radius: 15px;
+}
+.footone{
+  text-align: center;
+}
+
+#myCarousel .carousel-item img {
+  object-fit: cover;
+  object-position: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
