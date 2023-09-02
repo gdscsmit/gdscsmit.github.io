@@ -12,10 +12,11 @@ export default function Navbar() {
                     </button>
                     <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
                         <div className="navbar-nav ">
-                            <Link to='/' class="nav-link active" aria-current="page">Home</Link>
-                            <Link to='/app' class="nav-link active" aria-current="page">App</Link>
-                            <Link to='/team' class="nav-link active" aria-current="page">Team</Link>
-                            <Link to='/contact' class="nav-link active" aria-current="page">Contact</Link>
+                            <Link to='/' className="nav-link active" aria-current="page">Home</Link>
+                            <Link to='/app' className="nav-link active" aria-current="page">App</Link>
+                            <Link to='/team' className="nav-link active" aria-current="page">Team</Link>
+                            <Link to='/blogs' className="nav-link active" aria-current="page">Blogs</Link>
+                            <Link to='/contact' className="nav-link active" aria-current="page">Contact</Link>
                         </div>
                     </div>
                 </div>

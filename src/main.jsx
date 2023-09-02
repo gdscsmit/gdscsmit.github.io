@@ -4,6 +4,7 @@ import App from './App.jsx'
 import MobileApp from './Components/MobileApp';
 import Contact from './Components/Contact.jsx';
 import Team from './Components/Team.jsx';
+import Blog from './Components/Blogs.jsx'
 import { createBrowserRouter, RouterProvider} from "react-router-dom";
 import './index.css'
 
@@ -26,7 +27,7 @@ const MyApp = createBrowserRouter([
   },
   {
     path: "/blogs",
-    element: <Contact/>
+    element: <Blog/>
   }
 ]);
 

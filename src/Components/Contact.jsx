@@ -12,17 +12,17 @@ export default function Contact() {
 
             <form className='my-5 w-50 mx-auto'>
                 <div className="form-outline mb-4">
-                    <label className="form-label" for="form4Example1">Name</label>
+                    <label className="form-label" htmlFor="form4Example1">Name</label>
                     <input type="text" id="form4Example1" className="form-control" />
                 </div>
 
                 <div className="form-outline mb-4">
-                    <label className="form-label" for="form4Example2">Email address</label>
+                    <label className="form-label" htmlFor="form4Example2">Email address</label>
                     <input type="email" id="form4Example2" className="form-control" />
                 </div>
 
                 <div className="form-outline mb-4">
-                    <label className="form-label" for="form4Example3">Message</label>
+                    <label className="form-label" htmlFor="form4Example3">Message</label>
                     <textarea className="form-control" id="form4Example3" rows="4"></textarea>
                 </div>
 
