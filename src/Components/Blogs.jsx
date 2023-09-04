@@ -8,7 +8,7 @@ export default function Blogs() {
 
   useEffect(() => {
 
-    const blogsUrl = `https://www.googleapis.com/blogger/v3/blogs/3771334625318012412/posts?key=AIzaSyAHTfrDmbSqsXg6LB8r1Tv12uuxma0127E`;
+    const blogsUrl = `https://www.googleapis.com/blogger/v3/blogs/3771334625318012412/posts?key=${import.meta.env.VITE_API_KEY}`;
 
     axios
       .get(blogsUrl)
