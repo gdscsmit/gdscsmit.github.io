@@ -36,6 +36,13 @@
   border-radius: 15px;
 }
 
+.navbar.active{
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255,255,255,0));
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 20px 30px 0 rgba(0,0,0,0.1);
+}
+
 .footone {
   text-align: center;
 }
@@ -86,9 +93,9 @@
 
 .blogPage {
   background: url('./img/banner2.png') no-repeat center center fixed;
-  -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
+  opacity: 1;
   -o-background-size: cover;
 }
 
@@ -134,4 +141,24 @@
 .bg-green {
   background-color: var(--google-green) !important;
 
+}
+
+
+.testimonial-card .card-up {
+  height: 120px;
+  overflow: hidden;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+}
+
+.aqua-gradient {
+  background: linear-gradient(40deg, #2096ff, #05ffa3) !important;
+}
+
+.testimonial-card .avatar {
+  width: 120px;
+  margin-top: -60px;
+  overflow: hidden;
+  border: 5px solid #fff;
+  border-radius: 50%;
 }
