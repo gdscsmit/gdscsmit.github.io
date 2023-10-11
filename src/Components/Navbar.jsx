@@ -13,9 +13,18 @@ export default function Navbar() {
         setIsNavOpen(false);
     };
 
+    const navbarStyle = {
+        transition: 'max-height 0.9s ease',
+        maxHeight: isNavOpen ? '250px' : '58px', 
+        overflow: 'hidden',
+    };
+  
+    
+
+
     return (
         <>
-            <div className={`navbar active sticky-top navbar-expand-lg navbar navbar-light navcus ${isNavOpen ? 'active' : ''}`}>
+            <div className="navbar sticky-top navbar-expand-lg navbar-light navcus" style={navbarStyle}>
                 <div className="container-fluid">
                     <a className="navbar-brand">
                         <img src="./img/logo.png" height="35" alt="" loading="lazy" style={{ backgroundColor: 'transparent' }} />
@@ -23,8 +32,8 @@ export default function Navbar() {
                     <button className="navbar-toggler" type="button" onClick={toggleNav}>
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className={`collapse navbar-collapse justify-content-end ${isNavOpen ? 'show' : ''}`} id="navbarNavAltMarkup">
-                        <div className="navbar-nav">
+                    <div className={`collapse navbar-collapse justify-content-end ${isNavOpen ? 'show' : ''}`} id="navbarNavAltMarkup" >
+                        <div className="navbar-nav" >
                             <Link to='/' className="fw-bold nav-link active" aria-current="page" onClick={closeNavbar}>
                                 Home
                             </Link>
