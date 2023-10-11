@@ -1,26 +1,32 @@
-import React from 'react'
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
+    const [isNavOpen, setIsNavOpen] = useState(false);
+
+    const toggleNav = () => {
+        setIsNavOpen(!isNavOpen);
+    };
+
     return (
-        <>
-            <div className="navbar active sticky-top navbar-expand-lg navbar navbar-light navcus">
-                <div className="container-fluid">
-                    <a className="navbar-brand"><img src="./img/logo.png" height="35" alt="" loading="lazy" style={{backgroundColor: 'transparent'}}/></a>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                        <div className="navbar-nav ">
-                            <Link to='/' className="fw-bold nav-link active" aria-current="page">Home</Link>
-                            <Link to='/app' className="fw-bold nav-link active" aria-current="page">App</Link>
-                            <Link to='/team' className="fw-bold nav-link active" aria-current="page">Team</Link>
-                            <Link to='/blogs' className="fw-bold nav-link active" aria-current="page">Blogs</Link>
-                            <Link to='/contact' className="fw-bold nav-link active" aria-current="page">Contact</Link>
-                        </div>
+        <nav className={`navbar navbar-expand-lg navbar-light navcus ${isNavOpen ? 'active' : ''}`}>
+            <div className="container">
+                <Link to="/" className="navbar-brand" style={{ marginRight: '700px' }}>
+                    <img src="./img/logo.png" height="35" alt="" loading="lazy" style={{ backgroundColor: 'transparent' }} />
+                </Link>
+                <button className="navbar-toggler" type="button" onClick={toggleNav}>
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className={`collapse navbar-collapse ${isNavOpen ? 'show' : ''}`}>
+                    <div className="navbar-nav">
+                        <Link to="/" className="fw-bold nav-link" aria-current="page">Home</Link>
+                        <Link to="/app" className="fw-bold nav-link" aria-current="page">App</Link>
+                        <Link to="/team" className="fw-bold nav-link" aria-current="page">Team</Link>
+                        <Link to="/blogs" className="fw-bold nav-link" aria-current="page">Blogs</Link>
+                        <Link to="/contact" className="fw-bold nav-link" aria-current="page">Contact</Link>
                     </div>
                 </div>
             </div>
-        </>
-    )
+        </nav>
+    );
 }
