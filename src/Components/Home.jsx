@@ -53,7 +53,7 @@ export default function Home() {
             <div className="bg embed-responsive-16by9 text-center my-4" id="Video">
 
                 <div className="container-fluid overflow-hidden ">
-                    <iframe className="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/earTjC0iSjg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe className="embed-responsive-item yt_video" width="560" height="315" src="https://www.youtube.com/embed/earTjC0iSjg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
 
             </div>
