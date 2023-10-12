@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { CoreTeamData, domainLeadsData } from "../constants/team";
@@ -64,6 +64,25 @@ const CardList = ({ teamData }) => {
 };
 
 export default function Team() {
+
+  // extract all unique domains name 
+  const uniqueDomains = [
+    ...new Set(CoreTeamData.map((member) => member.domain)),
+  ];
+
+  const [activeDomain, setActiveDomain] = useState(uniqueDomains[0]);
+
+  const handleTabClick = (domain) => {
+    setActiveDomain(domain);
+  };
+  // filter member with specific domain
+  function filterTeamMembers(data, domain) {
+    let mem = data.filter((member) => member.domain === domain);
+    // console.log(mem);
+    return mem;
+  }
+  // console.log(uniqueDomains);
+
   return (
     <>
       <Navbar />
@@ -77,8 +96,27 @@ export default function Team() {
           </font>
         </strong>
       </div>
+
+      <div className="my-5 w-75 mx-auto">
+        <div className="d-flex flex-column justify-center">
+          <h1 className="text-center display-5 font-bold">Our Team</h1>
+          <p className="text-2xl text-center max-w-lg md:max-w-2xl">
+            Meet the Driving Force Behind Innovation
+          </p>
+          <p className="text-2xl text-center max-w-lg md:max-w-2xl">
+            Learning and innovation are at the core of everything we do. With our extraordinary team,
+            we are dedicated to solving everyday challenges and pushing the boundaries of technology. Together, we are making it happen!
+          </p>
+        </div>
+      </div>
+
       <div className="container ">
         <div className="row text-center justify-content-center my-5">
+          <strong>
+            <font className="fw-bold fs-1 text-uppercase">
+              <font color="#000">Lead</font>
+            </font>
+          </strong>
           <div className="col-xl-3 col-sm-4 my-3">
             <div className="bg-white rounded shadow-sm py-5 px-4 border border-4 border-blue">
               <img
@@ -124,7 +162,41 @@ export default function Team() {
             </font>
           </strong>
         </div>
-        <CardList teamData={domainLeadsData}></CardList>
+        <div className="container my-5">
+          <ul className="nav nav-pills" id="domainTabs">
+            {uniqueDomains.map((domain) => (
+              <li className="nav-item" key={domain}>
+                <a
+                  className={`nav-link ${domain === activeDomain ? 'active' : ''}`}
+                  onClick={() => handleTabClick(domain)}
+                  style={{
+                    fontWeight: "bold",
+                    color: "black", // Set text color to black
+                  }}
+                >
+                  {domain}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <style>
+            {`
+              .nav-link:hover {
+                cursor: pointer;
+              }
+            `}
+          </style>
+          <div className="tab-content" id="domainTabsContent">
+            {uniqueDomains.map((domain) => (
+              <div
+                key={domain}
+                className={`tab-pane fade ${domain === activeDomain ? 'show active' : ''}`}
+              >
+                <CardList teamData={filterTeamMembers(domainLeadsData, domain)} />
+              </div>
+            ))}
+          </div>
+        </div>
 
         <div className="container-fluid text-center my-3">
           <strong>
@@ -133,7 +205,42 @@ export default function Team() {
             </font>
           </strong>
         </div>
-        <CardList teamData={CoreTeamData}></CardList>
+        <div className="container my-5">
+          <ul className="nav nav-pills" id="domainTabs">
+            {uniqueDomains.map((domain) => (
+              <li className="nav-item" key={domain}>
+                <a
+                  className={`nav-link ${domain === activeDomain ? 'active' : ''}`}
+                  onClick={() => handleTabClick(domain)}
+                  style={{
+                    fontWeight: "bold",
+                    color: "black", // Set text color to black
+                    // fontFamily: "Roboto, sans-serif",// Use a fancy font
+                  }}
+                >
+                  {domain}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <style>
+            {`
+              .nav-link:hover {
+                cursor: pointer;
+              }
+            `}
+          </style>
+          <div className="tab-content" id="domainTabsContent">
+            {uniqueDomains.map((domain) => (
+              <div
+                key={domain}
+                className={`tab-pane fade ${domain === activeDomain ? 'show active' : ''}`}
+              >
+                <CardList teamData={filterTeamMembers(CoreTeamData, domain)} />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
       <Footer />
     </>
