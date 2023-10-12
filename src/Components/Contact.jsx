@@ -1,29 +1,26 @@
 import React, { useState } from 'react'
 import Navbar from './Navbar'
 import Footer from './Footer'
-import { firestore } from '../firebaseConfig';
-
+import { database } from '../firebaseConfig';
 
 export default function Contact() {
     
-    const [name,setName]=useState([]);
-    const [email,setEmail]=useState([]);
-    const [message,setMessage]=useState([]);
+    const [name,setName]=useState("");
+    const [email,setEmail]=useState("");
+    const [message,setMessage]=useState("");
 
 
 const handleSubmit =(e) =>{
     e.preventDefault();
     console.log(name,email,message);
 
-    firestore.collection("messages").add({
-        name,
-        email,
-        message,
-    }).then(() =>{
-        setName(""),
-        setEmail(""),
-        setMessage("");
+    database.ref("Responses").push({
+        name: name,
+        email: email,
+        message: message
     }).catch((error) => console.error('error submitting data :' ,error));
+
+    alert("Sent Successfully!")
 
 };
     return (
