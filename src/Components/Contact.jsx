@@ -6,17 +6,17 @@ export default function Contact() {
     return (
         <>
             <Navbar />
-            <div className="col-md-4 my-5 mx-auto">
+            <div className="col-md-4 my-4 mx-auto contact_logo">
                 <img src="./img/gdsc_form.svg" className="img-fluid" alt="..." />
             </div>
 
-            <form className='my-5 w-50 mx-auto'>
+            <form className='my-5 w-50 mx-auto form'>
                 <div className="form-outline mb-4">
                     <label className="form-label" htmlFor="form4Example1">Name</label>
                     <input type="text" id="form4Example1" className="form-control" />
                 </div>
 
-                <div className="form-outline mb-4">
+                <div className="form-outline mb-4 ">
                     <label className="form-label" htmlFor="form4Example2">Email address</label>
                     <input type="email" id="form4Example2" className="form-control" />
                 </div>
@@ -27,7 +27,7 @@ export default function Contact() {
                 </div>
 
                 <div className='d-flex justify-content-center'>
-                    <button type="submit" className="btn btn-primary mb-4">Send</button>
+                    <button type="submit" className="btn btn-primary mb-5 form_submit_btn">Send</button>
                 </div >
             </form>
 

@@ -182,3 +182,29 @@ div.vision_card:hover{
 div.vision_card:hover .vision_card__title{
   width: 100% !important;
 }
+
+.form_submit_btn{
+  padding: 0.5rem 0.5rem;
+  width: 40%;
+}
+
+@media screen and (max-width: 800px) {
+  .contact_logo{
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .yt_video{
+    width: 99%;
+    height: 400;
+  }
+
+  .form{
+    width: 80% !important;
+  }
+
+  .contact_logo{
+    width: 80%;
+  }
+}
