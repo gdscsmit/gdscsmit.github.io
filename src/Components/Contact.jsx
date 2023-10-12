@@ -29,7 +29,7 @@ export default function Contact() {
                 <img src="./img/gdsc_form.svg" className="img-fluid" alt="..." />
             </div>
 
-            <form className='my-5 w-50 mx-auto' method='POST'>
+            <form className='my-5 w-50 mx-auto'>
                 <div className="form-outline mb-4">
                     <label className="form-label" htmlFor="form4Example1">Name</label>
                     <input type="text" id="form4Example1" className="form-control"   onChange={(event) => {
