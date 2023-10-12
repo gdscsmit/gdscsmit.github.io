@@ -29,7 +29,7 @@ const handleSubmit =(e) =>{
     return (
         <>
             <Navbar />
-            <div className="col-md-4 my-5 mx-auto">
+            <div className="col-md-4 my-4 mx-auto contact_logo">
                 <img src="./img/gdsc_form.svg" className="img-fluid" alt="..." />
             </div>
 
@@ -41,7 +41,7 @@ const handleSubmit =(e) =>{
                     }} />
                 </div>
 
-                <div className="form-outline mb-4">
+                <div className="form-outline mb-4 ">
                     <label className="form-label" htmlFor="form4Example2">Email address</label>
                     <input type="email" id="form4Example2" className="form-control" value={email}  onChange={(event) => {
                         setEmail(event.target.value)
