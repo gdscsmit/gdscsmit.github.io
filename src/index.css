@@ -172,3 +172,13 @@
   border: 5px solid #fff;
   border-radius: 50%;
 }
+
+div.vision_card{
+  height: 55vh;
+}
+div.vision_card:hover{
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26) ;
+}
+div.vision_card:hover .vision_card__title{
+  width: 100% !important;
+}
