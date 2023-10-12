@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { db } from '../firebaseConfig,js'
+import { db } from '../firebaseConfig.js'
 import { addDoc,collection } from 'firebase/firestore'
 import Navbar from './Navbar'
 import Footer from './Footer'
