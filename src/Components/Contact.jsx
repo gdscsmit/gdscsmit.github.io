@@ -4,25 +4,25 @@ import Footer from './Footer'
 import { database } from '../firebaseConfig';
 
 export default function Contact() {
-    
-    const [name,setName]=useState("");
-    const [email,setEmail]=useState("");
-    const [message,setMessage]=useState("");
+
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
 
 
-const handleSubmit =(e) =>{
-    e.preventDefault();
-    console.log(name,email,message);
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(name, email, message);
 
-    database.ref("Responses").push({
-        name: name,
-        email: email,
-        message: message
-    }).catch((error) => console.error('error submitting data :' ,error));
+        database.ref("Responses").push({
+            name: name,
+            email: email,
+            message: message
+        }).catch((error) => console.error('error submitting data :', error));
 
-    alert("Sent Successfully!")
+        alert("Sent Successfully!")
 
-};
+    };
     return (
         <>
             <Navbar />
@@ -33,21 +33,21 @@ const handleSubmit =(e) =>{
             <form className='my-5 w-50 mx-auto' onSubmit={handleSubmit}>
                 <div className="form-outline mb-4">
                     <label className="form-label" htmlFor="form4Example1">Name</label>
-                    <input type="text" id="form4Example1" className="form-control" value={name}  onChange={(event) => {
+                    <input type="text" id="form4Example1" className="form-control" value={name} onChange={(event) => {
                         setName(event.target.value)
                     }} />
                 </div>
 
                 <div className="form-outline mb-4 ">
                     <label className="form-label" htmlFor="form4Example2">Email address</label>
-                    <input type="email" id="form4Example2" className="form-control" value={email}  onChange={(event) => {
+                    <input type="email" id="form4Example2" className="form-control" value={email} onChange={(event) => {
                         setEmail(event.target.value)
                     }} />
                 </div>
 
                 <div className="form-outline mb-4">
                     <label className="form-label" htmlFor="form4Example3">Message</label>
-                    <textarea className="form-control" id="form4Example3" rows="4"  value={message} onChange={(event) => {
+                    <textarea className="form-control" id="form4Example3" rows="4" value={message} onChange={(event) => {
                         setMessage(event.target.value)
                     }} ></textarea>
                 </div>
