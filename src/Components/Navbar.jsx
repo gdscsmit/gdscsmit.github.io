@@ -35,7 +35,7 @@ export default function Navbar() {
         <>
             <div className="navbar sticky-top navbar-expand-lg navbar-light navcus frosted-glass" style={navbarStyle}>
                 <div className="container-fluid" >
-                    <a className="navbar-brand" style={navBrandStyle}  >
+                    <a href="https://gdscsmit.github.io/" className="navbar-brand" style={navBrandStyle}  >
                         <img src="./img/logo.png" height='100%' width='100%' alt="" loading="lazy" style={{ backgroundColor: 'transparent' }} />
                     </a>
                     <button className="navbar-toggler" type="button" onClick={toggleNav}>
