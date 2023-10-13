@@ -1,0 +1,7 @@
+
+@media all and (min-width: 992px) {
+	.navbar-brand .nav-item .dropdown-menu{  display:block; opacity: 0;  visibility: hidden; transition:.3s; margin-top:0;  }
+	.navbar-brand .nav-item:hover .nav-link{ color: #fff;  }
+	
+	
+}

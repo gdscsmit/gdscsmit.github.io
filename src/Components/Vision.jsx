@@ -6,7 +6,7 @@ const Vision = () => {
             id: 1,
             title: "Seminar",
             description: "Exploring Emerging Tech Trends Together.",
-            classes: "bg-red rounded",
+            classes: "bg-red rounded " ,
         },
         {
             id: 2,
@@ -18,7 +18,7 @@ const Vision = () => {
             id: 3,
             title: "Workshop",
             description: "Hands-On Learning for Tech Enthusiasts",
-            classes: "bg-yellow rounded",
+            classes: "bg-yellow rounded text-dark",
         },
         {
             id: 4,

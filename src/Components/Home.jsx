@@ -6,11 +6,11 @@ export default function Home() {
     return (
         <>
             <div className="container divone">
-                <div className='display-5'>Welcome to GDSC SMIT </div>
+                <div className='display-6 ' style={{borderRadius:'5px'}}>Welcome to GDSC SMIT </div>
                 <div className="row">
                     <div className="col-md-8">
                         <div className="my-5">
-                            <div className='text-lg text-sm'>
+                            <div className='text-lg text-sm text-dark'>
                                 Google Developer Student Clubs are groups of students from diverse undergraduate or graduate programs with an interest
                                 in growing as a developer.
                                 As GDSC's chapter at Sikkim Manipal Institute of Technology, we aim to help students connect with like-minded developers, facilitate knowledge across several domains, from industry leaders to students and build solutions that will be the change we hope for.
@@ -33,12 +33,12 @@ export default function Home() {
             <div className="d-flex container overflow-hidden text-center my-4 ">
                 <div className="gy-5 d-flex flex-md-row flex-column text-center my-5 justify-content-center align-items-center">
                     <div className="my-3 mx-3">
-                        <div className="p-3 border bg-light"><b>Why GDSC?</b><br />
+                        <div className="p-3 border bg-info"><b>Why GDSC?</b><br />
                             By joining GDSC at SMIT, you gain access to numerous workshops, information sessions, and student-community collaborative projects</div>
                     </div>
 
                     <div className="my-3 mx-3">
-                        <div className="p-3 border bg-light">
+                        <div className="p-3 border bg-info">
                             <b>Concept of GDSC</b>
                             <br />
                             The purpose of GDSC is to inspire and empower students through understanding technology and reflecting on it's impact</div>
@@ -52,7 +52,7 @@ export default function Home() {
 
             <div className="bg embed-responsive-16by9 text-center my-4" id="Video">
 
-                <div className="container-fluid overflow-hidden ">
+                <div className="container-fluid overflow-hidden view-overlay">
                     <iframe className="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/earTjC0iSjg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
 

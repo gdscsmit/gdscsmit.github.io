@@ -9,7 +9,8 @@ export default function Contact() {
             <div className="col-md-4 my-5 mx-auto">
                 <img src="./img/gdsc_form.svg" className="img-fluid" alt="..." />
             </div>
-
+        
+            
             <form className='my-5 w-50 mx-auto'>
                 <div className="form-outline mb-4">
                     <label className="form-label" htmlFor="form4Example1">Name</label>
