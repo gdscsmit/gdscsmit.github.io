@@ -16,11 +16,17 @@ export default function Navbar() {
 
     const navbarStyle = {
         transition: 'max-height 0.9s ease',
-        maxHeight: isNavOpen ? '350px' : '100px',
+        maxHeight: isNavOpen ? '350px' : '60px',
         overflow: 'hidden',
-        paddingRight: '3vw',
-        paddingLeft: '3vw',
+        paddingRight: '2%',
+        paddingLeft: '2%',
     };
+
+    const navBrandStyle = {
+        width: '40%',
+        maxWidth: '300px',
+        overflow: 'hidden',
+    }
 
 
 
@@ -28,9 +34,9 @@ export default function Navbar() {
     return (
         <>
             <div className="navbar sticky-top navbar-expand-lg navbar-light navcus frosted-glass" style={navbarStyle}>
-                <div className="container-fluid">
-                    <a className="navbar-brand">
-                        <img src="./img/logo.png" height="45" alt="" loading="lazy" style={{ backgroundColor: 'transparent' }} />
+                <div className="container-fluid" >
+                    <a className="navbar-brand" style={navBrandStyle}  >
+                        <img src="./img/logo.png" height='100%' width='100%' alt="" loading="lazy" style={{ backgroundColor: 'transparent' }} />
                     </a>
                     <button className="navbar-toggler" type="button" onClick={toggleNav}>
                         <span className="navbar-toggler-icon"></span>
