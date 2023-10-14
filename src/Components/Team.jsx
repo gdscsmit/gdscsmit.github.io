@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { CoreTeamData, domainLeadsData } from "../constants/team";
@@ -113,7 +113,7 @@ export default function Team() {
       <div className="container ">
         <div className="row text-center justify-content-center my-5">
           <strong>
-            <font className="fw-bold fs-1 text-uppercase">
+            <font className="fs-1 text-center display-5">
               <font color="#000">Lead</font>
             </font>
           </strong>
@@ -157,65 +157,34 @@ export default function Team() {
         </div>
         <div className="container-fluid text-center my-3">
           <strong>
-            <font className="fw-bold fs-1 text-uppercase">
+            <font className="fs-1 text-center display-5">
               <font color="#000">Domain leads</font>
             </font>
           </strong>
         </div>
         <div className="container my-5">
-          <ul className="nav nav-pills" id="domainTabs">
-            {uniqueDomains.map((domain) => (
-              <li className="nav-item" key={domain}>
-                <a
-                  className={`nav-link ${domain === activeDomain ? 'active' : ''}`}
-                  onClick={() => handleTabClick(domain)}
-                  style={{
-                    fontWeight: "bold",
-                    color: "black", // Set text color to black
-                  }}
-                >
-                  {domain}
-                </a>
-              </li>
-            ))}
-          </ul>
-          <style>
-            {`
-              .nav-link:hover {
-                cursor: pointer;
-              }
-            `}
-          </style>
-          <div className="tab-content" id="domainTabsContent">
-            {uniqueDomains.map((domain) => (
-              <div
-                key={domain}
-                className={`tab-pane fade ${domain === activeDomain ? 'show active' : ''}`}
-              >
-                <CardList teamData={filterTeamMembers(domainLeadsData, domain)} />
-              </div>
-            ))}
-          </div>
+          {uniqueDomains.map((domain) => (
+            <CardList teamData={filterTeamMembers(domainLeadsData, domain)} />
+          ))}
         </div>
 
         <div className="container-fluid text-center my-3">
           <strong>
-            <font className="fw-bold fs-1 text-uppercase">
+            <font className="fs-1 text-center display-5">
               <font color="#000">Core Team Members</font>
             </font>
           </strong>
         </div>
         <div className="container my-5">
-          <ul className="nav nav-pills" id="domainTabs">
+          <ul className="nav nav-pills d-flex justify-content-center border border-dark p-3" id="domainTabs">
             {uniqueDomains.map((domain) => (
-              <li className="nav-item" key={domain}>
+              <li className="nav-item mx-3" key={domain}>
                 <a
                   className={`nav-link ${domain === activeDomain ? 'active' : ''}`}
                   onClick={() => handleTabClick(domain)}
                   style={{
                     fontWeight: "bold",
-                    color: "black", // Set text color to black
-                    // fontFamily: "Roboto, sans-serif",// Use a fancy font
+                    color: "black"
                   }}
                 >
                   {domain}
