@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import { leadImg, CoreTeamData, domainLeadsData } from "../constants/team";
+import { CoreTeamData, domainLeadsData } from "../constants/team";
 
 const getRandomColor = () => {
   const colors = ["blue", "red", "yellow", "green"];
@@ -120,7 +120,7 @@ export default function Team() {
           <div className="col-xl-3 col-sm-4 my-3">
             <div className="bg-white rounded shadow-sm py-5 px-4 border border-4 border-blue">
               <img
-                src={leadImg}
+                src="https://bootstrapious.com/i/snippets/sn-team/teacher-4.jpg"
                 alt=""
                 width="100"
                 className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
@@ -158,12 +158,14 @@ export default function Team() {
         <div className="container-fluid text-center my-3">
           <strong>
             <font className="fs-1 text-center display-5">
-              <font color="#000">Domain Leads</font>
+              <font color="#000">Domain leads</font>
             </font>
           </strong>
         </div>
         <div className="container my-5">
-          <CardList teamData={domainLeadsData} />
+          {uniqueDomains.map((domain) => (
+            <CardList teamData={filterTeamMembers(domainLeadsData, domain)} />
+          ))}
         </div>
 
         <div className="container-fluid text-center my-3">
