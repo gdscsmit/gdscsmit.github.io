@@ -18,9 +18,9 @@ export default function Home() {
                         </div>
                         <div className="butone">
                             <a href="https://gdsc.community.dev/accounts/login/?next=/sikkim-manipal-institute-of-technology-gangtok/">
-                                <button type="button" className="btn btn-primary btn-sm mx-3">Become Member</button>
+                                <button type="button" className="btn btn-primary mx-3">Become Member</button>
                             </a>
-                            <a href="https://developers.google.com/community/gdsc#:~:text=Google%20Developer%20Student%20Clubs%20(GDSC,as%20a%20developer%20are%20welcome."><button type="button" className="btn btn-outline-dark btn-sm" >Learn More</button></a>
+                            <a href="https://developers.google.com/community/gdsc#:~:text=Google%20Developer%20Student%20Clubs%20(GDSC,as%20a%20developer%20are%20welcome."><button type="button" className="btn btn-outline-dark" >Learn More</button></a>
                         </div>
                     </div>
                     <div className="col-md-4">
@@ -31,7 +31,7 @@ export default function Home() {
 
 
             <div className="d-flex container overflow-hidden text-center my-4 ">
-                <div className="gy-5 d-flex flex-md-row flex-column text-center my-5 justify-content-center align-items-center">
+                <div className="gy-5 d-flex flex-md-row flex-column text-center my-5 justify-content-center align-items-center shadow-lg">
                     <div className="my-3 mx-3">
                         <div className="p-3 border bg-light"><b>Why GDSC?</b><br />
                             By joining GDSC at SMIT, you gain access to numerous workshops, information sessions, and student-community collaborative projects</div>
