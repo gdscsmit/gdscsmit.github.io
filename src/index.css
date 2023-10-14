@@ -1,12 +1,12 @@
 :root {
-  --google-blue: #4285F4;
-  --google-red: #EA4335;
-  --google-yellow: #F4B400;
-  --google-green: #34A853;
+  --google-blue: #4285f4;
+  --google-red: #ea4335;
+  --google-yellow: #f4b400;
+  --google-green: #34a853;
 }
 
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .navcus {
@@ -36,22 +36,21 @@
   border-radius: 15px;
 }
 
-.navbar.active{
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255,255,255,0));
+.navbar.active {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  box-shadow: 0 20px 30px 0 rgba(0,0,0,0.1);
+  box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.1);
 }
 
-
-
-
-
-
-
-
-
-
+.navbar-toggler-icon {
+  width: 24px;
+  height: 24px;
+}
 
 .footone {
   text-align: center;
@@ -86,8 +85,6 @@
   position: relative;
   width: 100%;
   padding-bottom: 50%;
-
-
 }
 
 .iframe-container iframe {
@@ -98,11 +95,10 @@
   left: 0;
   right: 0;
   bottom: 0;
-
 }
 
 .blogPage {
-  background: url('./img/banner2.png') no-repeat center center fixed;
+  background: url("./img/banner2.png") no-repeat center center fixed;
   -moz-background-size: cover;
   background-size: cover;
   opacity: 1;
@@ -135,30 +131,25 @@
 
 .bg-blue {
   background-color: var(--google-blue) !important;
-
 }
 
 .bg-red {
   background-color: var(--google-red) !important;
-
 }
 
 .bg-yellow {
   background-color: var(--google-yellow) !important;
-
 }
 
 .bg-green {
   background-color: var(--google-green) !important;
-
 }
-
 
 .testimonial-card .card-up {
   height: 120px;
   overflow: hidden;
-  border-top-left-radius: .25rem;
-  border-top-right-radius: .25rem;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
 }
 
 .aqua-gradient {
@@ -171,4 +162,56 @@
   overflow: hidden;
   border: 5px solid #fff;
   border-radius: 50%;
+}
+
+.navbar-nav .nav-link {
+  transition: background-color 0.3s, color 0.3s, border-bottom 0.2s;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar-nav .nav-link:hover {
+  border-bottom: 2px solid #333;
+}
+
+.frosted-glass {
+  background: rgba( 255, 255, 255, 0.2 );
+  box-shadow: 0 8px 32px 0 rgba(95, 96, 118, 0.37);
+  backdrop-filter: blur( 10.5px );
+  -webkit-backdrop-filter: blur( 5.5px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+div.vision_card {
+  height: 55vh;
+}
+div.vision_card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}
+div.vision_card:hover .vision_card__title {
+  width: 100% !important;
+}
+
+.form_submit_btn {
+  padding: 0.5rem 0.5rem;
+  width: 40%;
+}
+
+@media screen and (max-width: 800px) {
+  .contact_logo {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .yt_video {
+    width: 99%;
+    height: 400;
+  }
+
+  .form {
+    width: 80% !important;
+  }
+
+  .contact_logo {
+    width: 80%;
+  }
 }
