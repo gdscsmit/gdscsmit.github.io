@@ -37,11 +37,9 @@
 }
 
 .navbar.active {
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0)
-  );
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0));
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.1);
@@ -180,12 +178,15 @@
   -webkit-backdrop-filter: blur(5.5px);
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
+
 div.vision_card {
   height: 55vh;
 }
+
 div.vision_card:hover {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
 }
+
 div.vision_card:hover .vision_card__title {
   width: 100% !important;
 }
@@ -210,12 +211,20 @@ div.vision_card:hover .vision_card__title {
   .contact_logo {
     width: 80%;
   }
+
+  .img-box {
+    padding: 0rem !important;
+  }
 }
 
 @media screen and (max-width: 600px) {
   .yt_video {
     width: 99%;
     height: 400;
+  }
+
+  .img-box {
+    padding: 0rem !important;
   }
 
   .form {
@@ -226,6 +235,7 @@ div.vision_card:hover .vision_card__title {
     width: 80%;
   }
 }
+
 /* top to button */
 .scroll-to-top-button {
   position: fixed;
