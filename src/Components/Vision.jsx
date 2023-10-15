@@ -1,4 +1,5 @@
 import React from 'react'
+ import {motion} from "framer-motion"
 
 const Vision = () => {
     const visions = [
@@ -46,17 +47,24 @@ const Vision = () => {
                     </p>
                 </div>
 
-                <div className="d-flex  flex-md-row flex-column text-center vh-25 ">
+                <div className="d-flex  flex-md-row flex-column text-center vh-100 " style={{padding:"50px"}}>
                     {visions.map(({ id, title, description, classes, image }) => (
-                        <div key={id} className="vision_card rounded my-2 mx-2 w-100 border border-light-subtle">
-                            <div className="my-4 mx-4 d-flex flex-column ">
-                            <img className='w-100 rounded' src={image} style={{height: "155px"}}/>
+                        <motion.div key={id} className="vision_card rounded my-2 mx-2 w-100 border border-light-subtle my-4 mx-4 d-flex flex-column"  
+                        whileHover={{scale:1.1,
+                            textShadow: "1px 1px 1px gray",
+                            boxShadow: "1px 1px 1px gray",
+                            borderRadius: '15px'
+                    }}
+                        
+                     style={{marginLeft:"0px",padding:"5px",border:"none"}}
+                        >
+                             <img className='w-100 rounded' src={image} style={{height: "155px"}}/>
                                 <span className={`vision_card__title fw-bold text-white rounded p-2 w-75 my-4 px-3 ${classes} mx-auto`}>
                                     {title}
                                 </span>
-                            </div>
-                            <p className="w-75 mx-auto">{description}</p>
-                        </div>
+
+                            <p className="w-75 mx-auto"   style={{fontSize:"20px" ,fontWeight:"bold"}} >{description}    </p>
+                        </motion.div>
                     ))}
                 </div>
             </div>
