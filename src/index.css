@@ -174,11 +174,11 @@
 }
 
 .frosted-glass {
-  background: rgba( 255, 255, 255, 0.2 );
+  background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 8px 32px 0 rgba(95, 96, 118, 0.37);
-  backdrop-filter: blur( 10.5px );
-  -webkit-backdrop-filter: blur( 5.5px );
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  backdrop-filter: blur(10.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 div.vision_card {
   height: 55vh;
@@ -193,6 +193,17 @@ div.vision_card:hover .vision_card__title {
 .form_submit_btn {
   padding: 0.5rem 0.5rem;
   width: 40%;
+}
+
+.loader {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  display: grid;
+  grid-template-columns: auto;
+  place-content: center;
+  align-items: center;
+  position: fixed;
 }
 
 @media screen and (max-width: 800px) {
