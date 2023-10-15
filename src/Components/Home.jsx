@@ -1,9 +1,16 @@
-import React from 'react'
+import React,{ useEffect } from 'react'
 import Footer from './Footer'
 import Vision from './Vision'
 import ScrollToTopButton from './gototop'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Home() {
+
+    useEffect(() => {
+        AOS.init();
+      }, [])
+
     return (
         <>
             <div className="container divone">
@@ -54,7 +61,7 @@ export default function Home() {
             <div className="bg embed-responsive-16by9 text-center my-4" id="Video">
 
                 <div className="container-fluid overflow-hidden ">
-                    <iframe className="embed-responsive-item yt_video" width="560" height="315" src="https://www.youtube.com/embed/earTjC0iSjg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe data-aos="fade-up" className="embed-responsive-item yt_video" width="560" height="315" src="https://www.youtube.com/embed/earTjC0iSjg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
 
             </div>
@@ -63,9 +70,9 @@ export default function Home() {
 
                 <strong>
                     <font size="7">
-                        <font color="#4285F4">Connect. </font>
-                        <font color="#EA4335">Learn. </font>
-                        <font color="#34A853">Grow. </font>
+                        <font color="#4285F4" data-aos="fade-up" >Connect. </font>
+                        <font color="#EA4335" data-aos="fade-up" data-aos-duration='3000'>Learn. </font>
+                        <font color="#34A853" data-aos="fade-up" data-aos-duration='3000'>Grow. </font>
                     </font>
                 </strong>
             </div>
