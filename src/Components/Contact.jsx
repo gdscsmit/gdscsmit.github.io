@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { database } from "../firebaseConfig";
 import { Loader } from "./Loader";
 
 export default function Contact() {
+  const [loading, setLoading] = useState(true);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -34,7 +35,7 @@ export default function Contact() {
 
   return (
     <>{
-      loader ? <Loader/> :
+      loading ? <Loader/> :
       <>
       <Navbar />
       <div
