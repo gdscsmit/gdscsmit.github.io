@@ -1,6 +1,7 @@
 import React from 'react'
 import Footer from './Footer'
 import Vision from './Vision'
+import ScrollToTopButton from './gototop'
 
 export default function Home() {
     return (
@@ -68,7 +69,7 @@ export default function Home() {
                     </font>
                 </strong>
             </div>
-
+            <ScrollToTopButton/>
             <Footer />
         </>
     )
