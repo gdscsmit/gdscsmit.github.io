@@ -47,11 +47,15 @@ cd gdscsmit.github.io
 ```bash
 npm install
 ```
+- Create a `.env` file in the root directory and add the following
+```bash
+VITE_FIREBASE_DATABASE_URL="https://gdsc-smit-85496-default-rtdb.firebaseio.com"
+```
 - Start the development server:
 ```sql
 npm run dev
 ```
-Open your browser and go to http://localhost:3000 to view the website.
+Open your browser and go to `http://localhost:5173` to view the website.
 
 ## Guidelines for Contributions
 
