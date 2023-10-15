@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import { CoreTeamData, domainLeadsData } from "../constants/team";
+import { leadImg, CoreTeamData, domainLeadsData } from "../constants/team";
+
 
 const getRandomColor = () => {
   const colors = ["blue", "red", "yellow", "green"];
@@ -12,18 +13,18 @@ const getRandomColor = () => {
 const Card = ({ data }) => {
   const randomBorderColor = getRandomColor();
   const randomBgColor = getRandomColor();
-
+  
   return (
     <div className="col-xl-3 col-sm-4 my-3">
       <div
         className={`bg-white rounded shadow-sm py-5 px-4 border border-4 border-${randomBorderColor}`}
-      >
+        >
         <img
           src={data.img}
           alt=""
           width="100"
           className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
-        />
+          />
         <h5 className="mb-0 fs-4 fw-bold color-dark">{data.name}</h5>
         <span className="small fw-light text-uppercase text-muted">
           {data.domain}
@@ -58,14 +59,12 @@ const CardList = ({ teamData }) => {
     <div className="row text-center justify-content-center my-5">
       {teamData.map((data, index) => (
         <Card key={index} data={data} />
-      ))}
+        ))}
     </div>
   );
 };
 
-export default function Team() {
-
-  // extract all unique domains name 
+export default function Team() { 
   const uniqueDomains = [
     ...new Set(CoreTeamData.map((member) => member.domain)),
   ];
@@ -75,14 +74,10 @@ export default function Team() {
   const handleTabClick = (domain) => {
     setActiveDomain(domain);
   };
-  // filter member with specific domain
   function filterTeamMembers(data, domain) {
     let mem = data.filter((member) => member.domain === domain);
-    // console.log(mem);
     return mem;
   }
-  // console.log(uniqueDomains);
-
   return (
     <>
       <Navbar />
@@ -120,7 +115,7 @@ export default function Team() {
           <div className="col-xl-3 col-sm-4 my-3">
             <div className="bg-white rounded shadow-sm py-5 px-4 border border-4 border-blue">
               <img
-                src="https://bootstrapious.com/i/snippets/sn-team/teacher-4.jpg"
+                src={leadImg}
                 alt=""
                 width="100"
                 className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
@@ -158,14 +153,12 @@ export default function Team() {
         <div className="container-fluid text-center my-3">
           <strong>
             <font className="fs-1 text-center display-5">
-              <font color="#000">Domain leads</font>
+              <font color="#000">Domain Leads</font>
             </font>
           </strong>
         </div>
         <div className="container my-5">
-          {uniqueDomains.map((domain) => (
-            <CardList teamData={filterTeamMembers(domainLeadsData, domain)} />
-          ))}
+          <CardList teamData={domainLeadsData} />
         </div>
 
         <div className="container-fluid text-center my-3">
