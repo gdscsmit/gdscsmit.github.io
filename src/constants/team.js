@@ -4,6 +4,7 @@ let filesPromise = fetchFiles();
 filesPromise.then(files => {
   domainLeadsData = [
     {
+      id: 1,
       img: `${files[2].url}`,
       name: "Pooranjoy Bhattacharya",
       domain: "Web Development",
@@ -12,6 +13,7 @@ filesPromise.then(files => {
       linkedin: "https://john",
     },
     {
+      id: 2,
       img: `${files[0].url}`,
       name: "Cloud Computing",
       domain: "Abhijnyan Das",
@@ -20,6 +22,7 @@ filesPromise.then(files => {
       linkedin: "https://john",
     },
     {
+      id: 3,
       img: `${files[25].url}`,
       name: "Madhurjya Dasgupta",
       domain: "Cybersecurity",
@@ -28,6 +31,7 @@ filesPromise.then(files => {
       linkedin: "https://john",
     },
     {
+      id: 4,
       img: `${files[26].url}`,
       name: "Rishav Krishnan",
       domain: "App Development",
@@ -36,6 +40,7 @@ filesPromise.then(files => {
       linkedin: "https://john",
     },
     {
+      id: 5,
       img: `${files[23].url}`,
       name: "Shivam Sourav",
       domain: "AI/ML",
@@ -44,6 +49,7 @@ filesPromise.then(files => {
       linkedin: "https://john",
     },
     {
+      id: 6,
       img: `${files[28].url}`,
       name: "Kuldeep Bora",
       domain: "UI/UX Design",
@@ -52,6 +58,7 @@ filesPromise.then(files => {
       linkedin: "https://john",
     },
     {
+      id: 7,
       img: `${files[5].url}`,
       name: "Dhruv Bhutura",
       domain: "Public Relations",
@@ -60,9 +67,10 @@ filesPromise.then(files => {
       linkedin: "https://john",
     },
   ];
-  
+
   CoreTeamData = [
     {
+      id: 8,
       img: `${files[20].url}`,
       name: "Toshith Yadav",
       domain: "Web Development",
@@ -71,6 +79,7 @@ filesPromise.then(files => {
       linkedin: "https://john",
     },
     {
+      id: 9,
       img: `${files[13].url}`,
       name: "Seedorf Rai",
       domain: "Web Development",
@@ -79,6 +88,7 @@ filesPromise.then(files => {
       linkedin: "https://john",
     },
     {
+      id: 10,
       img: `${files[24].url}`,
       name: "Girish Sharma",
       domain: "Web Development",
@@ -87,6 +97,7 @@ filesPromise.then(files => {
       linkedin: "https://john",
     },
     {
+      id: 11,
       img: `${files[32].url}`,
       name: "Madhurya Hait",
       domain: "Web Development",
@@ -95,6 +106,7 @@ filesPromise.then(files => {
       linkedin: "https://john",
     },
     {
+      id: 12,
       img: `${files[9].url}`,
       name: "Sneha Supriya",
       domain: "AI/ML",
@@ -103,6 +115,7 @@ filesPromise.then(files => {
       linkedin: "https://john",
     },
     {
+      id: 13,
       img: `${files[4].url}`,
       name: "Om Gupta",
       domain: "AI/ML",
@@ -111,6 +124,7 @@ filesPromise.then(files => {
       linkedin: "https://john",
     },
     {
+      id: 14,
       img: `${files[1].url}`,
       name: "Mayur K T",
       domain: "AI/ML",
@@ -119,6 +133,7 @@ filesPromise.then(files => {
       linkedin: "https://john",
     },
     {
+      id: 15,
       img: `${files[19].url}`,
       name: "Pratham Srivastava",
       domain: "AI/ML",
@@ -127,6 +142,7 @@ filesPromise.then(files => {
       linkedin: "https://john",
     },
     {
+      id: 16,
       img: `${files[6].url}`,
       name: "Neha Sultan",
       domain: "AI/ML",
@@ -135,6 +151,7 @@ filesPromise.then(files => {
       linkedin: "https://john",
     },
     {
+      id: 17,
       img: `${files[33].url}`,
       name: "Indraneel Das",
       domain: "Cybersecurity",
@@ -143,6 +160,7 @@ filesPromise.then(files => {
       linkedin: "https://john",
     },
     {
+      id: 18,
       img: `${files[29].url}`,
       name: "Shayan Vatsa",
       domain: "Cybersecurity",
@@ -151,6 +169,7 @@ filesPromise.then(files => {
       linkedin: "https://john",
     },
     {
+      id: 19,
       img: `${files[17].url}`,
       name: "Gunjan Chakrabartty",
       domain: "Cybersecurity",
@@ -159,6 +178,7 @@ filesPromise.then(files => {
       linkedin: "https://john",
     },
     {
+      id: 20,
       img: `${files[12].url}`,
       name: "Ishaan S. Oshima",
       domain: "Cybersecurity",
@@ -167,6 +187,7 @@ filesPromise.then(files => {
       linkedin: "https://john",
     },
     {
+      id: 21,
       img: `${files[27].url}`,
       name: "Manaswi Jha",
       domain: "UI/UX Design",
@@ -175,6 +196,7 @@ filesPromise.then(files => {
       linkedin: "https://john",
     },
     {
+      id: 22,
       img: `${files[31].url}`,
       name: "Priyanjana Paul",
       domain: "UI/UX Design",
@@ -183,6 +205,7 @@ filesPromise.then(files => {
       linkedin: "https://john",
     },
     {
+      id: 23,
       img: `${files[3].url}`,
       name: "Sneha Seal",
       domain: "Cloud Computing",
@@ -191,6 +214,7 @@ filesPromise.then(files => {
       linkedin: "https://john",
     },
     {
+      id: 24,
       img: `${files[15].url}`,
       name: "Deepak Manda",
       domain: "Cloud Computing",
@@ -199,6 +223,7 @@ filesPromise.then(files => {
       linkedin: "https://john",
     },
     {
+      id: 25,
       img: `${files[7].url}`,
       name: "Prantor J. Bharadwaj",
       domain: "Cloud Computing",
@@ -207,7 +232,7 @@ filesPromise.then(files => {
       linkedin: "https://john",
     },
   ];
-  
+
   leadImg = `${files[34].url}`;
 });
 
