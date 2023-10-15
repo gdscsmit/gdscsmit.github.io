@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { leadImg, CoreTeamData, domainLeadsData } from "../constants/team";
-
+import { Loader } from "./Loader";
 
 const getRandomColor = () => {
   const colors = ["blue", "red", "yellow", "green"];
@@ -13,18 +13,18 @@ const getRandomColor = () => {
 const Card = ({ data }) => {
   const randomBorderColor = getRandomColor();
   const randomBgColor = getRandomColor();
-  
+
   return (
     <div className="col-xl-3 col-sm-4 my-3">
       <div
         className={`bg-white rounded shadow-sm py-5 px-4 border border-4 border-${randomBorderColor}`}
-        >
+      >
         <img
           src={data.img}
           alt=""
           width="100"
           className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"
-          />
+        />
         <h5 className="mb-0 fs-4 fw-bold color-dark">{data.name}</h5>
         <span className="small fw-light text-uppercase text-muted">
           {data.domain}
@@ -59,17 +59,18 @@ const CardList = ({ teamData }) => {
     <div className="row text-center justify-content-center my-5">
       {teamData.map((data, index) => (
         <Card key={index} data={data} />
-        ))}
+      ))}
     </div>
   );
 };
 
-export default function Team() { 
+export default function Team() {
   const uniqueDomains = [
     ...new Set(CoreTeamData.map((member) => member.domain)),
   ];
 
   const [activeDomain, setActiveDomain] = useState(uniqueDomains[0]);
+  const [loading, setLoading] = useState(true);
 
   const handleTabClick = (domain) => {
     setActiveDomain(domain);
@@ -78,9 +79,21 @@ export default function Team() {
     let mem = data.filter((member) => member.domain === domain);
     return mem;
   }
+  
+  useEffect(() => {
+    setTimeout(() => {
+
+      setLoading(false);
+    }, 5000);
+  }, []);
+
   return (
     <>
+    {
+        loading ? <Loader /> :
+      <>
       <Navbar />
+
       <div id="endcontain" className="container-fluid text-center my-3">
         <strong>
           <font className="fw-bold fs-1 text-uppercase">
@@ -205,6 +218,8 @@ export default function Team() {
         </div>
       </div>
       <Footer />
+    </>
+    }
     </>
   );
 }
