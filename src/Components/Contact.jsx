@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { database } from "../firebaseConfig";
+import { Loader } from "./Loader";
 
 export default function Contact() {
+  const [loading, setLoading] = useState(true);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -23,8 +25,18 @@ export default function Contact() {
 
     alert("Sent Successfully!");
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+
+      setLoading(false);
+    }, 1000);
+  }, []);
+
   return (
-    <>
+    <>{
+      loading ? <Loader/> :
+      <>
       <Navbar />
       <div
         style={{
@@ -110,6 +122,8 @@ export default function Contact() {
         </div>
         <Footer />
       </div>
+    </>
+  }
     </>
   );
 }
