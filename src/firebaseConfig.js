@@ -1,5 +1,5 @@
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/database';
+import firebase from "firebase/compat/app";
+import "firebase/compat/database";
 import "firebase/compat/storage";
 
 const firebaseConfig = {
@@ -10,11 +10,11 @@ const firebaseConfig = {
   storageBucket: `${import.meta.env.VITE_FIREBASE_STORAGE_BUCKET}`,
   messagingSenderId: `${import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID}`,
   appId: `${import.meta.env.VITE_FIREBASE_APP_ID}`,
-  measurementId: `${import.meta.env.VITE_FIREBASE_MEASUREMENT_ID}`
+  measurementId: `${import.meta.env.VITE_FIREBASE_MEASUREMENT_ID}`,
 };
 
 // Initialize Firebase
 
-firebase.initializeApp(firebaseConfig)
+firebase.initializeApp(firebaseConfig);
 export const database = firebase.database();
 export const storage = firebase.storage();
