@@ -21,11 +21,11 @@ const getAllFilesFromStorage = async () => {
 };
 
 export async function fetchFiles() {
-    try {
-      const files = await getAllFilesFromStorage();
-      console.log(files)
-      return files
-    } catch (error) {
-      console.error('Error fetching files:', error);
-    }
+  try {
+    const files = await getAllFilesFromStorage();
+    console.log(files)
+    return files
+  } catch (error) {
+    console.error('Error fetching files:', error);
+  }
 }
