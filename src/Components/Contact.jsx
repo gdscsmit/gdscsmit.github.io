@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { database } from "../firebaseConfig";
+import { Loader } from "./Loader";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -23,8 +24,18 @@ export default function Contact() {
 
     alert("Sent Successfully!");
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+
+      setLoading(false);
+    }, 1000);
+  }, []);
+
   return (
-    <>
+    <>{
+      loader ? <Loader/> :
+      <>
       <Navbar />
       <div
         style={{
@@ -110,6 +121,8 @@ export default function Contact() {
         </div>
         <Footer />
       </div>
+    </>
+  }
     </>
   );
 }
