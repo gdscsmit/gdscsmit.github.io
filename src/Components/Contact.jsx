@@ -68,8 +68,8 @@ export default function Contact() {
                 </p>
                 <form onSubmit={handleSubmit}>
                   <div className="form-outline input-group mb-4 ">
-                    <span class="input-group-text" id="basic-addon1">
-                      <i class="fa-solid fa-user text-primary"></i>
+                    <span className="input-group-text" id="basic-addon1">
+                      <i className="fa-solid fa-user text-primary"></i>
                     </span>
                     <input
                       type="text"
@@ -84,8 +84,8 @@ export default function Contact() {
                   </div>
 
                   <div className="form-outline input-group mb-4 ">
-                    <span class="input-group-text" id="basic-addon1">
-                      <i class="fa-solid fa-envelope text-primary"></i>
+                    <span className="input-group-text" id="basic-addon1">
+                      <i className="fa-solid fa-envelope text-primary"></i>
                     </span>
                     <input
                       type="email"
