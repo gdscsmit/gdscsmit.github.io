@@ -51,8 +51,8 @@ const Vision = () => {
                     {visions.map(({ id, title, description, classes, image }) => (
                         <motion.div key={id} className="vision_card rounded my-2 mx-2 w-100 border border-light-subtle my-4 mx-4 d-flex flex-column"  
                         whileHover={{scale:1.1,
-                            textShadow: "5px 5px 10px #21130d",
-                            boxShadow: "10px 10px 10px #e0f216",
+                            textShadow: "3px 3px 5px gray",
+                            boxShadow: "3px 3px 5px gray",
                             borderRadius: '15px'
                     }}
                         
