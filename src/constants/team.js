@@ -1,6 +1,7 @@
 import { fetchFiles } from "./TeamImages";
 let filesPromise = fetchFiles();
 
+// define the data of the team members
 filesPromise.then(files => {
   domainLeadsData = [
     {
@@ -60,7 +61,7 @@ filesPromise.then(files => {
       linkedin: "https://john",
     },
   ];
-  
+
   CoreTeamData = [
     {
       img: `${files[20].url}`,
@@ -207,7 +208,7 @@ filesPromise.then(files => {
       linkedin: "https://john",
     },
   ];
-  
+
   leadImg = `${files[34].url}`;
 });
 

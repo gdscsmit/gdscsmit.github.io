@@ -2,6 +2,7 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/database";
 import "firebase/compat/storage";
 
+// Firebase configuration
 const firebaseConfig = {
   apiKey: `${import.meta.env.VITE_FIREBASE_API_KEY}`,
   authDomain: `${import.meta.env.VITE_FIREBASE_AUTH_DOMAIN}`,
@@ -14,7 +15,6 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-
 firebase.initializeApp(firebaseConfig);
 export const database = firebase.database();
 export const storage = firebase.storage();

@@ -1,3 +1,4 @@
+// Desc: Main entry point for the app
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
@@ -8,6 +9,7 @@ import BlogPage from "./Components/BlogPage.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 
+// Create a router
 const MyApp = createBrowserRouter([
   {
     path: "/",
@@ -31,6 +33,7 @@ const MyApp = createBrowserRouter([
   },
 ]);
 
+// Render the app
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={MyApp} />

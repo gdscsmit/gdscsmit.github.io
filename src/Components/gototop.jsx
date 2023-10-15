@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import {FaArrowCircleUp} from 'react-icons/fa'; 
+// GOTO TOP BUTTON
+import { useState, useEffect } from "react";
+import { FaArrowCircleUp } from "react-icons/fa";
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -16,25 +17,28 @@ const ScrollToTopButton = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    // Add the event listener to the window.
+    window.addEventListener("scroll", handleScroll);
 
     // Remove the event listener when the component unmounts.
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
+  // Scroll to the top of the page when the button is clicked.
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth', // You can change this to 'auto' for an instant scroll
+      behavior: "smooth", // You can change this to 'auto' for an instant scroll
     });
   };
 
   return (
-    <div className={`scroll-to-top-button ${isVisible ? 'visible' : ''}`}>
+    <div className={`scroll-to-top-button ${isVisible ? "visible" : ""}`}>
       <button onClick={scrollToTop}>
-        <FaArrowCircleUp/>
+        {/* Arrow Up Icon */}
+        <FaArrowCircleUp />
       </button>
     </div>
   );
