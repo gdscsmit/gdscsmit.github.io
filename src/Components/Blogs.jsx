@@ -72,7 +72,6 @@ export default function Blogs() {
                       {moment(blog.published).startOf("hour").fromNow()}
                     </small>
                   </div>
-                  {/* <b>Penned by {blog.author.displayName}</b> */}
                 </div>
                 <hr />
                 <div className="card-body text-start">
@@ -83,9 +82,6 @@ export default function Blogs() {
                     className="blog-content card-text"
                     dangerouslySetInnerHTML={{ __html: blog.content }}
                   />
-                  {/* <a href={blog.url} target="_blank" className="btn btn-primary">
-                  Visit Blogger
-                </a> */}
                   <b
                     className="text-primary"
                     onClick={() => navigate(`/blogs/${blog.id}`)}
@@ -94,9 +90,6 @@ export default function Blogs() {
                     READ MORE
                   </b>
                 </div>
-                {/* <div className="card-footer text-body-secondary h5">
-                <b>Published at {blog.published}</b>
-              </div> */}
               </div>
             ))}
           </div>
