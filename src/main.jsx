@@ -20,7 +20,7 @@ const MyApp = createBrowserRouter([
   },
   {
     path: "/team",
-    element: <Team />,
+    element: <Team/>,
   },
   {
     path: "/contact",

@@ -27,7 +27,12 @@
   margin-top: 5%;
   margin-bottom: 5%;
 }
-
+.becomebutton{
+  transition: 0.5s;
+}
+.becomebutton:hover{
+  transform: scale(0.93);
+}
 .mainone {
   margin-left: 5%;
   margin-right: 5%;
@@ -216,6 +221,9 @@ div.vision_card {
 
 div.vision_card:hover {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+.vision_card__title{
+  transition: 0.5s;
 }
 
 div.vision_card:hover .vision_card__title {
