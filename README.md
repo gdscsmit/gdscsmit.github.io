@@ -78,6 +78,4 @@ Thank you for your interest in the GDSC Official Website! If you have any questi
 
 ## Our Valuable Contributors of `Hacktoberfest 2023`
 
-<a href="https://github.com/gdscsmit/gdscsmit.github.io/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=gdscsmit/gdscsmit.github.io" />
-</a>
+<img src="https://contrib.rocks/image?repo=gdscsmit/gdscsmit.github.io" />

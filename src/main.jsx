@@ -7,6 +7,7 @@ import Team from "./Components/Team.jsx";
 import BlogPage from "./Components/BlogPage.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
+import Blog from "./Components/Blog.jsx";
 
 const MyApp = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const MyApp = createBrowserRouter([
   {
     path: "/blogs",
     element: <BlogPage />,
+  },
+  {
+    path: "/blogs/:id",
+    element: <Blog />,
   },
 ]);
 

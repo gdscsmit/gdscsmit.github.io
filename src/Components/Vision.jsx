@@ -1,6 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Vision = () => {
+
+    useEffect(() => {
+        AOS.init();
+      }, [])
+
     const visions = [
         {
             id: 1,
@@ -48,8 +55,8 @@ const Vision = () => {
 
                 <div className="d-flex  flex-md-row flex-column text-center vh-25 ">
                     {visions.map(({ id, title, description, classes, image }) => (
-                        <div key={id} className="vision_card rounded my-2 mx-2 w-100 border border-light-subtle">
-                            <div className="my-4 mx-4 d-flex flex-column ">
+                        <div key={id} className="vision_card rounded my-2 mx-2 w-100 border border-light-subtle" data-aos="fade-up" data-aos-duration='1000'>
+                            <div className="mt-4 mx-4 d-flex flex-column ">
                             <img className='w-100 rounded' src={image} style={{height: "155px"}}/>
                                 <span className={`vision_card__title fw-bold text-white rounded p-2 w-75 my-4 px-3 ${classes} mx-auto`}>
                                     {title}
