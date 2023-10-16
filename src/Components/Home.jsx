@@ -32,14 +32,14 @@ export default function Home() {
 
 
             <div className="d-flex container overflow-hidden text-center my-4 ">
-                <div className="gy-5 d-flex flex-md-row flex-column text-center my-5 justify-content-center align-items-center shadow-lg">
+                <div className="gy-5 d-flex flex-md-row flex-column text-center my-5 justify-content-center align-items-center " >
                     <div className="my-3 mx-3">
-                        <div className="p-3 border bg-light"><b>Why GDSC?</b><br />
+                        <div className="p-3 border bg-light shadow-lg"><b>Why GDSC?</b><br />
                             By joining GDSC at SMIT, you gain access to numerous workshops, information sessions, and student-community collaborative projects</div>
                     </div>
 
                     <div className="my-3 mx-3">
-                        <div className="p-3 border bg-light">
+                        <div className="p-3 border bg-light shadow-lg">
                             <b>Concept of GDSC</b>
                             <br />
                             The purpose of GDSC is to inspire and empower students through understanding technology and reflecting on it's impact</div>
