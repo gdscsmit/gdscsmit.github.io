@@ -13,8 +13,8 @@ filesPromise.then(files => {
     },
     {
       img: `${files[0].url}`,
-      name: "Cloud Computing",
-      domain: "Abhijnyan Das",
+      name: "Abhijnyan Das",
+      domain: "Cloud Computing",
       twitter: "https://john",
       insta: "https://john",
       linkedin: "https://john",

@@ -45,11 +45,11 @@ export default function Navbar() {
                             <Link to='/app' className="text-black fw-bold nav-link active " aria-current="page" onClick={closeNavbar}>
                                 App
                             </Link>
-                            <Link to='/team' className="text-black fw-bold nav-link active link-hover-effect" aria-current="page" onClick={closeNavbar}>
-                                Team
-                            </Link>
                             <Link to='/blogs' className="text-black fw-bold nav-link active link-hover-effect" aria-current="page" onClick={closeNavbar}>
                                 Blogs
+                            </Link>
+                            <Link to='/team' className="text-black fw-bold nav-link active link-hover-effect" aria-current="page" onClick={closeNavbar}>
+                                Team
                             </Link>
                             <Link to='/contact' className="text-black fw-bold nav-link active link-hover-effect" aria-current="page" onClick={closeNavbar}>
                                 Contact

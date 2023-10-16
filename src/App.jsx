@@ -11,7 +11,7 @@ function App() {
     setTimeout(() => {
 
       setLoading(false);
-    }, 2000);
+    }, 600);
   }, []);
 
   return (
