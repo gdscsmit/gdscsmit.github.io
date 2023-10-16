@@ -1,4 +1,4 @@
-import { storage } from '../firebaseConfig';
+import { storage } from "../firebaseConfig";
 
 const getAllFilesFromStorage = async () => {
   try {
@@ -12,20 +12,18 @@ const getAllFilesFromStorage = async () => {
       fileUrls.push({ name: file.name, url });
     }
     return fileUrls;
-
   } catch (error) {
-    console.error('Error fetching files from storage:', error);
+    console.error("Error fetching files from storage:", error);
     throw error;
   }
-
 };
 
 export async function fetchFiles() {
   try {
     const files = await getAllFilesFromStorage();
     // console.log(files)
-    return files
+    return files;
   } catch (error) {
-    console.error('Error fetching files:', error);
+    console.error("Error fetching files:", error);
   }
 }
