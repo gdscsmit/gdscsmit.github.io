@@ -30,7 +30,7 @@ export default function Contact() {
     setTimeout(() => {
 
       setLoading(false);
-    }, 1000);
+    }, 500);
   }, []);
 
   return (
