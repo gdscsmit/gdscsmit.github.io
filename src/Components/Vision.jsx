@@ -62,7 +62,7 @@ const Vision = () => {
                                     {title}
                                 </span>
                             </div>
-                            <p className="w-75 mx-auto">{description}</p>
+                            <p className="w-75 mx-auto mb-2 ">{description}</p>
                         </div>
                     ))}
                 </div>
