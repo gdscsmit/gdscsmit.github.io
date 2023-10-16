@@ -28,14 +28,15 @@ export default function Contact() {
 
   useEffect(() => {
     setTimeout(() => {
-
       setLoading(false);
     }, 500);
   }, []);
 
   return (
-    <>{
-      loading ? <Loader /> :
+    <>
+      {loading ? (
+        <Loader />
+      ) : (
         <>
           <Navbar />
           <div
@@ -113,7 +114,10 @@ export default function Contact() {
                   </div>
 
                   <div className="d-flex justify-content-center">
-                    <button type="submit" className="btn btn-primary w-100 mb-4">
+                    <button
+                      type="submit"
+                      className="btn btn-primary w-100 mb-4"
+                    >
                       Send
                     </button>
                   </div>
@@ -123,7 +127,7 @@ export default function Contact() {
             <Footer />
           </div>
         </>
-    }
+      )}
     </>
   );
 }

@@ -37,9 +37,11 @@
 }
 
 .navbar.active {
-  background: linear-gradient(135deg,
-      rgba(255, 255, 255, 0.1),
-      rgba(255, 255, 255, 0));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.1);
@@ -95,13 +97,21 @@
   bottom: 0;
 }
 
-.blogPage {
+.blog-content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* .blogPage {
   background: url("./img/banner2.png") no-repeat center center fixed;
   -moz-background-size: cover;
   background-size: cover;
   opacity: 1;
   -o-background-size: cover;
-}
+} */
 
 .blogFooter {
   background-color: #fff;
@@ -149,12 +159,11 @@
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
 }
-.my-3>.p-3{
+.my-3 > .p-3 {
   transition-duration: 0.4s;
 }
-.my-3>.p-3:hover{
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.50);
-  
+.my-3 > .p-3:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .aqua-gradient {
@@ -175,19 +184,20 @@
 }
 
 .nav-link.active::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
-  bottom: -2px; 
+  bottom: -2px;
   width: 100%;
-  height: 2px; 
+  height: 2px;
   background-color: #000;
-  transform: scaleX(0); 
+  transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.3s ease; 
+  transition: transform 0.3s ease;
 }
 
-.nav-link.active:hover::after, .nav-link.active:focus::after {
+.nav-link.active:hover::after,
+.nav-link.active:focus::after {
   transform: scaleX(1);
 }
 
@@ -205,8 +215,7 @@ div.vision_card {
 }
 
 div.vision_card:hover {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.50);
-
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 div.vision_card:hover .vision_card__title {
