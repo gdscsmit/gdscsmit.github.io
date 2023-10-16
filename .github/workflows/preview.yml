@@ -1,0 +1,33 @@
+name: Deploy PR previews
+
+on:
+  # Trigger the workflow on push or pull request,
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
+
+# Run this workflow only on the main branch
+concurrency: preview-${{ github.ref }}
+
+jobs:
+  deploy-preview:
+    runs-on: ubuntu-20.04
+    steps:
+      # Step 1 : Checkout the code
+      - name: Checkout
+        uses: actions/checkout@v3
+
+        # Step 2 : Install and build the code
+      - name: Install and Build
+        run: |
+          npm install
+          npm run build
+
+        # Step 3 : Deploy the preview
+      - name: Deploy preview
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: ./build/
