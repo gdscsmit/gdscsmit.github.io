@@ -149,6 +149,13 @@
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
 }
+.my-3>.p-3{
+  transition-duration: 0.4s;
+}
+.my-3>.p-3:hover{
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.50);
+  
+}
 
 .aqua-gradient {
   background: linear-gradient(40deg, #2096ff, #05ffa3) !important;
@@ -162,13 +169,26 @@
   border-radius: 50%;
 }
 
-.navbar-nav .nav-link {
-  transition: background-color 0.3s, color 0.3s, border-bottom 0.2s;
-  border-bottom: 2px solid transparent;
+.nav-link.active {
+  position: relative;
+  text-decoration: none;
 }
 
-.navbar-nav .nav-link:hover {
-  border-bottom: 2px solid #333;
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px; 
+  width: 100%;
+  height: 2px; 
+  background-color: #000;
+  transform: scaleX(0); 
+  transform-origin: left;
+  transition: transform 0.3s ease; 
+}
+
+.nav-link.active:hover::after, .nav-link.active:focus::after {
+  transform: scaleX(1);
 }
 
 .frosted-glass {
@@ -181,14 +201,17 @@
 
 div.vision_card {
   height: 55vh;
+  transition-duration: 0.4s;
 }
 
 div.vision_card:hover {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.50);
+
 }
 
 div.vision_card:hover .vision_card__title {
   width: 100% !important;
+  transition-duration: 0.4s;
 }
 
 .form_submit_btn {
