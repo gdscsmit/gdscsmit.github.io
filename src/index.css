@@ -353,3 +353,12 @@ div.vision_card:hover .vision_card__title {
 .scroll-to-top-button button:hover {
   background-color: #0056b3;
 }
+
+@media(max-width:600px)
+{
+ .row.card{
+   
+    box-shadow: none !important;
+    border:none;
+ } 
+}
