@@ -7,23 +7,23 @@ on:
 
 jobs:
   build:
-      runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-      steps:
-        - name: Checkout Repository
-          uses: actions/checkout@v2
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
 
-        - name: Set Up Node.js
-          uses: actions/setup-node@v2
-          with:
-            node-version: '14'
+      - name: Set Up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
 
-        - name: Install Dependencies
-          run: npm install
+      - name: Install Dependencies
+        run: npm install
 
-        - name: Build
-          run: npm run build
-  
+      - name: Build
+        run: npm run build
+
   deploy:
     runs-on: ubuntu-latest
 
@@ -34,6 +34,6 @@ jobs:
       - name: Deploy to Preview
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
-          GITHUB_TOKEN: ${{ secrets.PR_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: preview
           FOLDER: dist
