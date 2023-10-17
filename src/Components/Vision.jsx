@@ -43,7 +43,7 @@ const Vision = () => {
         <>
             <div className="my-5 w-75 mx-auto">
                 <div className="d-flex flex-column justify-center">
-                    <h1 className="text-center display-5 font-bold">Vision</h1>
+                    <h1 className="vision text-center display-5 font-bold">Vision</h1>
                     <p className="text-2xl text-center max-w-lg md:max-w-2xl">
                         GDSC SMIT is inspired by the Google Developer&apos;s Family
                     </p>
@@ -62,7 +62,7 @@ const Vision = () => {
                                     {title}
                                 </span>
                             </div>
-                            <p className="w-75 mx-auto">{description}</p>
+                            <p className="w-75 mx-auto mb-2 ">{description}</p>
                         </div>
                     ))}
                 </div>

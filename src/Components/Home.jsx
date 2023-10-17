@@ -6,6 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function Home() {
+
   useEffect(() => {
     AOS.init();
   }, []);
@@ -29,12 +30,12 @@ export default function Home() {
             </div>
             <div className="butone">
               <a href="https://gdsc.community.dev/accounts/login/?next=/sikkim-manipal-institute-of-technology-gangtok/">
-                <button type="button" className="btn btn-primary mx-3">
+                <button type="button" id="becameButton" className="btn btn-primary mx-3">
                   Become Member
                 </button>
               </a>
               <a href="https://developers.google.com/community/gdsc#:~:text=Google%20Developer%20Student%20Clubs%20(GDSC,as%20a%20developer%20are%20welcome.">
-                <button type="button" className="btn btn-outline-dark">
+                <button type="button" id="learnButton" className="btn btn-outline-dark">
                   Learn More
                 </button>
               </a>
@@ -50,7 +51,7 @@ export default function Home() {
         <div className="gy-5 d-flex flex-md-row flex-column text-center my-5 justify-content-center align-items-center shadow-lg">
           <div className="my-3 mx-3">
             <div className="p-3 border bg-light">
-              <b>Why GDSC?</b>
+              <h3><b>Why GDSC?</b></h3> 
               <br />
               By joining GDSC at SMIT, you gain access to numerous workshops,
               information sessions, and student-community collaborative projects
@@ -59,7 +60,7 @@ export default function Home() {
 
           <div className="my-3 mx-3">
             <div className="p-3 border bg-light">
-              <b>Concept of GDSC</b>
+              <h3><b>Concept of GDSC</b></h3> 
               <br />
               The purpose of GDSC is to inspire and empower students through
               understanding technology and reflecting on it's impact
@@ -71,7 +72,7 @@ export default function Home() {
       <Vision />
 
       <div className="bg embed-responsive-16by9 text-center my-4" id="Video">
-        <div className="container-fluid overflow-hidden ">
+        <div className="container-fluid overflow-hidden shadow-lg " id="video">
           <iframe
             data-aos="fade-up"
             className="embed-responsive-item yt_video"
