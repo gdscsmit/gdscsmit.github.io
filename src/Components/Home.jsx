@@ -30,7 +30,7 @@ export default function Home() {
             </div>
             <div className="butone">
               <a href="https://gdsc.community.dev/accounts/login/?next=/sikkim-manipal-institute-of-technology-gangtok/">
-                <button type="button" className="btn btn-primary mx-3">
+                <button type="button" className="becomebutton btn btn-primary mx-3">
                   Become Member
                 </button>
               </a>
