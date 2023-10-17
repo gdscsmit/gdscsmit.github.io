@@ -14,10 +14,10 @@ export default function Navbar() {
 
     const navbarStyle = {
         transition: 'max-height 0.9s ease',
-        maxHeight: isNavOpen ? '350px' : '60px',
+        maxHeight: isNavOpen ? '350px' : '90px',
         overflow: 'hidden',
-        paddingRight: '2%',
-        paddingLeft: '2%',
+        padding:'1% 2%',
+         
     };
 
     const navBrandStyle = {
@@ -38,20 +38,20 @@ export default function Navbar() {
                     </button>
                     <div className={`collapse navbar-collapse justify-content-end ${isNavOpen ? 'show' : ''}`} id="navbarNavAltMarkup" >
                         <div className="navbar-nav" >
-                            <Link to='/' className="text-black fw-bold nav-link active"
+                            <Link to='/' className="text-black fw-bold nav-link active link-home"
                                 aria-current="page" onClick={closeNavbar}>
                                 Home
                             </Link>
-                            <Link to='/app' className="text-black fw-bold nav-link active " aria-current="page" onClick={closeNavbar}>
+                            <Link to='/app' className="text-black fw-bold nav-link active link-App " aria-current="page" onClick={closeNavbar}>
                                 App
                             </Link>
-                            <Link to='/blogs' className="text-black fw-bold nav-link active link-hover-effect" aria-current="page" onClick={closeNavbar}>
+                            <Link to='/blogs' className="text-black fw-bold nav-link active link-hover-effect link-Blogs" aria-current="page" onClick={closeNavbar}>
                                 Blogs
                             </Link>
-                            <Link to='/team' className="text-black fw-bold nav-link active link-hover-effect" aria-current="page" onClick={closeNavbar}>
+                            <Link to='/team' className="text-black fw-bold nav-link active link-hover-effect link-Team" aria-current="page" onClick={closeNavbar}>
                                 Team
                             </Link>
-                            <Link to='/contact' className="text-black fw-bold nav-link active link-hover-effect" aria-current="page" onClick={closeNavbar}>
+                            <Link to='/contact' className="text-black fw-bold nav-link active link-hover-effect link-Contact" aria-current="page" onClick={closeNavbar}>
                                 Contact
                             </Link>
                         </div>
