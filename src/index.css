@@ -27,21 +27,38 @@
   margin-top: 5%;
   margin-bottom: 5%;
 }
-#becameButton,#learnButton{
+#becameButton,
+#learnButton {
   transition: 0.5s;
 }
 
-#becameButton:hover, #learnButton:hover{
-transform: scale(0.93);
+#becameButton:hover,
+#learnButton:hover {
+  transform: scale(0.93);
 }
 
- 
 .mainone {
   margin-left: 5%;
   margin-right: 5%;
   text-align: center;
   border-style: solid;
   border-radius: 15px;
+}
+.link-home {
+  color: var(--google-blue) !important;
+}
+.link-App {
+  color: var(--google-red) !important;
+}
+.link-Blogs {
+  color: var(--google-green) !important;
+}
+.link-Team {
+  color: var(--google-yellow) !important;
+}
+
+.link-Contact {
+  color: var(--google-blue) !important;
 }
 
 .navbar.active {
@@ -70,8 +87,8 @@ transform: scale(0.93);
   height: 100vh;
   overflow: hidden;
 }
-#video{
-  border: 2px   lightgrey; 
+#video {
+  border: 2px lightgrey;
   padding: 15px;
   width: fit-content;
 }
@@ -202,12 +219,27 @@ transform: scale(0.93);
   bottom: -2px;
   width: 100%;
   height: 2px;
-  background-color: #000;
+  /* background-color: #000; */
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
 }
 
+.link-home.active::after {
+  background-color: var(--google-blue);
+}
+.link-App.active::after {
+  background-color: var(--google-red);
+}
+.link-Blogs.active::after {
+  background-color: var(--google-green);
+}
+.link-Team.active::after {
+  background-color: var(--google-yellow);
+}
+.link-Contact.active::after {
+  background-color: var(--google-blue);
+}
 .nav-link.active:hover::after,
 .nav-link.active:focus::after {
   transform: scaleX(1);
@@ -220,7 +252,7 @@ transform: scale(0.93);
   -webkit-backdrop-filter: blur(5.5px);
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
-.vision{
+.vision {
   color: #000001;
   font-family: sans-serif;
   font-size: 3rem;
@@ -238,15 +270,13 @@ div.vision_card:hover .vision_card__title {
   /* width: 100% !important; */
   transition-duration: 0.4s;
 }
-.vision_card__title{
+.vision_card__title {
   transition: 0.6s;
 }
-.vision_card__title:hover{
+.vision_card__title:hover {
   cursor: pointer;
   transform: scale(0.9);
 }
-
- 
 
 .form_submit_btn {
   padding: 0.5rem 0.5rem;
