@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <div className="container divone">
-        <div className="display-5">Welcome to GDSC SMIT </div>
+        <div className="display-5 fw-bold mt-4">Welcome to GDSC SMIT </div>
         <div className="row">
           <div className="col-md-8">
             <div className="my-5">
@@ -47,10 +47,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="d-flex container overflow-hidden text-center my-4 ">
-        <div className="gy-5 d-flex flex-md-row flex-column text-center my-5 justify-content-center align-items-center shadow-lg">
+      <div className="d-flex container overflow-hidden text-center ">
+        <div className="gy-5 rounded-4 d-flex flex-md-row flex-column text-center my-5 justify-content-center align-items-center">
           <div className="my-3 mx-3">
-            <div className="p-3 border bg-light">
+            <div className="p-3 rounded-4 border bg-light">
               <h3><b>Why GDSC?</b></h3> 
               <br />
               By joining GDSC at SMIT, you gain access to numerous workshops,
@@ -58,8 +58,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="my-3 mx-3">
-            <div className="p-3 border bg-light">
+          <div className="my-3 rounded-4 mx-3">
+            <div className="p-3 rounded-4 border bg-light">
               <h3><b>Concept of GDSC</b></h3> 
               <br />
               The purpose of GDSC is to inspire and empower students through
@@ -71,11 +71,12 @@ export default function Home() {
 
       <Vision />
 
-      <div className="bg embed-responsive-16by9 text-center my-4" id="Video">
-        <div className="container-fluid overflow-hidden shadow-lg " id="video">
-          <iframe
-            data-aos="fade-up"
-            className="embed-responsive-item yt_video"
+      <div
+      data-aos="fade-up"
+      className="bg embed-responsive-16by9 text-center my-5" id="Video">
+        <div className="container-fluid rounded-4 overflow-hidden shadow-lg " id="video">
+          <iframe 
+            className="rounded-4 embed-responsive-item yt_video"
             width="560"
             height="315"
             src="https://www.youtube.com/embed/earTjC0iSjg"
