@@ -104,6 +104,7 @@ export default function Home() {
         </strong>
       </div>
       <ScrollToTopButton />
+      <hr></hr>
       <Footer />
     </>
   );
