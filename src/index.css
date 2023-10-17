@@ -27,7 +27,15 @@
   margin-top: 5%;
   margin-bottom: 5%;
 }
+#becameButton,#learnButton{
+  transition: 0.5s;
+}
 
+#becameButton:hover, #learnButton:hover{
+transform: scale(0.93);
+}
+
+ 
 .mainone {
   margin-left: 5%;
   margin-right: 5%;
@@ -62,7 +70,11 @@
   height: 100vh;
   overflow: hidden;
 }
-
+#video{
+  border: 2px   lightgrey; 
+  padding: 15px;
+  width: fit-content;
+}
 .videowrapper {
   float: none;
   clear: both;
@@ -208,7 +220,11 @@
   -webkit-backdrop-filter: blur(5.5px);
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
-
+.vision{
+  color: #000001;
+  font-family: sans-serif;
+  font-size: 3rem;
+}
 div.vision_card {
   height: 55vh;
   transition-duration: 0.4s;
@@ -219,9 +235,18 @@ div.vision_card:hover {
 }
 
 div.vision_card:hover .vision_card__title {
-  width: 100% !important;
+  /* width: 100% !important; */
   transition-duration: 0.4s;
 }
+.vision_card__title{
+  transition: 0.6s;
+}
+.vision_card__title:hover{
+  cursor: pointer;
+  transform: scale(0.9);
+}
+
+ 
 
 .form_submit_btn {
   padding: 0.5rem 0.5rem;
