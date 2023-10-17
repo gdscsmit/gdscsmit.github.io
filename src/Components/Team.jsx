@@ -39,7 +39,7 @@ const Card = ({ data }) => {
         >
           <li className="list-inline-item mx-2 ">
             <a href={data.twitter} className="social-link">
-              <i className="fa fa-twitter" style={{ color: "#fff" }}></i>
+              <i className="fa-brands fa-x-twitter" style={{ color: "#fff" }}></i>
             </a>
           </li>
           <li className="list-inline-item mx-2">
@@ -387,7 +387,7 @@ export default function Team() {
                     >
                       <li className="list-inline-item mx-2 ">
                         <a href="#" className="social-link">
-                          <i className="fa fa-twitter" style={{ color: "#fff" }}></i>
+                          <i className="fa-brands fa-x-twitter" style={{ color: "#fff" }}></i>
                         </a>
                       </li>
                       <li className="list-inline-item mx-2">
