@@ -1,0 +1,33 @@
+name: 👯‍♂️ Style Changing Request
+description: Suggest a style design
+title: "Style: "
+labels: ["✨ goal: improve interface", "🚦status: awaiting triage"]
+body:
+  - type: textarea
+    id: style-idea
+    attributes:
+      label: What's the suggested design idea?
+      description: What are the things that you feed needs to be redesigned or updated?
+      placeholder: Add an appropriate descriptions
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Add screenshots
+      description: Add screenshots to see the demo
+      placeholder: Add the required screenshots to explain problem
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: "Record"
+
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
+
+        - label: I want to work on this issue
