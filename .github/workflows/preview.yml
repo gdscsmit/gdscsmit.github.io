@@ -1,18 +1,23 @@
 name: Preview on Vercel
 
 on:
+  # Run this workflow whenever a pull request is opened, synchronized, or reopened
   pull_request:
+    types: [opened, synchronize, reopened]
+
     branches:
-      - main 
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
+        # Checkout the repository
       - name: Check Out Code
         uses: actions/checkout@v2
 
+        # Deploy to Vercel
       - name: Deploy to Vercel
         env:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
@@ -20,4 +25,21 @@ jobs:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
           npm install -g vercel
-          vercel deploy --prod
+          vercel deploy --target preview
+          export DEPLOYMENT_URL=$(vercel --json list | jq -r '.[0].url')
+
+        # Comment on the pull request with the deployment URL
+      - name: Comment on Pull Request
+        uses: actions/github-script@v5
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const context = github.context;
+            const deploymentUrl = process.env.DEPLOYMENT_URL;
+            const prNumber = context.payload.pull_request.number;
+            const repo = context.repo.owner + "/" + context.repo.repo;
+            github.issues.createComment({
+              repo: repo,
+              issue_number: prNumber,
+              body: `Preview deployment is ready at ${deploymentUrl}`,
+            });
