@@ -360,5 +360,6 @@ div.vision_card:hover .vision_card__title {
    
     box-shadow: none !important;
     border:none;
+    width:100%;
  } 
 }
