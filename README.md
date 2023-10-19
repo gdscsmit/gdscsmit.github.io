@@ -1,7 +1,8 @@
 <div align=center>
 <h1>GDSC - SMIT Official Website</h1>
   
-![image](https://github.com/gdscsmit/gdscsmit.github.io/assets/109246240/fe48bc16-3ae6-4f6b-9fac-a0b8fc13acee)
+![image](https://github.com/gdscsmit/gdscsmit.github.io/assets/90945182/da714f35-81d3-460a-bcc8-ec13b486ab4c)
+
 </div>
 
 ### Note : This Repository is under `Hacktoberfest 2023`
