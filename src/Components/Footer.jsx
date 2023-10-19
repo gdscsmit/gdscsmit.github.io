@@ -1,13 +1,12 @@
 import React from "react";
 import { styled } from "@mui/material";
-
+import {Link} from "react-router-dom"
 import { FaGithub } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
 import { FaLinkedin } from "react-icons/fa";
 
 const Component = styled("div")`
   padding: 10px;
-
   width: 60px;
   height: 60px;
   text-align: center;
@@ -48,137 +47,61 @@ const LinkedIn = styled(Component)`
 
 const Footer = () => {
   return (
-    <div className="Feet">
-        
-      <div
-        className="Links"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          gap:"100px",
-
-          alignItems: "center",
-
-         
-          backgroundColor: "white",
-          color: "black",
-          fontWeight: "bold",
-        
-        }}
-      >
-        <div>
+    <footer
+      className="d-flex justify-content-around fw-bold align-items-center my-4" >
+      <div>
+        <Link to='/'>
           <img
-            src="/img/GDSC.png"
-            style={{ width: "230px", height: "250px", cursor: "pointer" }}
-            onClick={() => {
-              window.location = "https://developers.google.com/community";
-            }}
+            className="my-3"
+            src="/img/logo.png"
+            style={{ width: "15rem", height: "38px", cursor: "pointer" }}
           />
-        </div>
-
-        <div style={{ display: "flex", gap: "20px", marginBottom: "15px" }}>
-          <Instagram
-            onClick={() => {
-              window.location = "https://www.instagram.com/gdscsmit/";
-            }}
-          >
-            <BsInstagram
-              style={{ color: "#d62976 ", marginBottom: "55px" }}
-            ></BsInstagram>
-            <span style={{ color: "white" }}>Instagram</span>
-          </Instagram>
-
-          <Github
-            onClick={() => {
-              window.location =
-                "https://github.com/gdscsmit/gdscsmit.github.io";
-            }}
-          >
-            <FaGithub
-              style={{ color: "black", marginBottom: "55px" }}
-            ></FaGithub>
-            <span style={{ color: "white" }}>GitHub</span>
-          </Github>
-
-          <LinkedIn
-            onClick={() => {
-              window.location =
-                " https://www.linkedin.com/company/gdsc-smit/about/";
-            }}
-          >
-            <FaLinkedin
-              style={{ color: "#0A66C2", marginBottom: "55px" }}
-            ></FaLinkedin>
-            <span style={{ color: "white" }}>LinkedIn</span>
-          </LinkedIn>
-        </div>
-
-        <div style={{ padding: "5px", cursor: "pointer" }}>
-          <ul className="custom-list">
-            <h6>Quick Links</h6>
-            <li>
-              <span>Contact Us</span>
-            </li>
-
-            <li
-              onClick={() => {
-                window.location =
-                  "https://developers.google.com/community/gdsc";
-              }}
-            >
-              <span>About GDSC</span>
-            </li>
-
-            <li
-              onClick={() => {
-                window.location = "https://policies.google.com/terms";
-              }}
-            >
-              <span>Terms</span>
-            </li>
-
-            <li
-              onClick={() => {
-                window.location = "https://policies.google.com/privacy";
-              }}
-            >
-              <span>Privacy</span>
-            </li>
-            <li
-              onClick={() => {
-                window.location = "https://gdsc.community.dev/events/#/list";
-              }}
-            >
-              <span>UpComingEvents</span>
-            </li>
-
-            <li
-              onClick={() => {
-                window.location = "https://gdsc.community.dev/chapters/";
-              }}
-            >
-              Chapters
-            </li>
-
-            <li
-              onClick={() => {
-                window.location =
-                  "https://gdsc.community.dev/participation-terms/";
-              }}
-            >
-              ParticipationTerms
-            </li>
-            
-          </ul>
-        </div>
+        </Link>
       </div>
 
-      <div style={{ textAlign: "center" ,marginBottom:"50px"}}>
+      <div className="text-center" style={{ display: "flex", gap: "20px", position: "absolute" }}>
+        <Instagram className="text-center"
+          onClick={() => {
+            window.location = "https://www.instagram.com/gdscsmit/";
+          }}
+        >
+          <BsInstagram
+            style={{ color: "#d62976 ", marginBottom: "55px" }}
+          ></BsInstagram>
+          <span className="text-center" style={{ color: "white" }}>Instagram</span>
+        </Instagram>
+
+        <Github
+          onClick={() => {
+            window.location =
+              "https://github.com/gdscsmit/gdscsmit.github.io";
+          }}
+        >
+          <FaGithub className="text-center"
+            style={{ color: "black", marginBottom: "55px" }}
+          ></FaGithub>
+          <span className="text-center" style={{ color: "white" }}>GitHub</span>
+        </Github>
+
+        <LinkedIn
+          onClick={() => {
+            window.location =
+              " https://www.linkedin.com/company/gdscsmit/about/";
+          }}
+        >
+          <FaLinkedin className="text-center"
+            style={{ color: "#0A66C2", marginBottom: "55px" }}
+          ></FaLinkedin>
+          <span className="text-center" style={{ color: "white" }}>LinkedIn</span>
+        </LinkedIn>
+      </div>
+
+      <div className="text-center">
         <p>© 2023 COPYRIGHT GDSC SMIT</p>
       </div>
 
-      
-    </div>
+    </footer>
+
   );
 };
 
