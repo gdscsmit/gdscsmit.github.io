@@ -366,3 +366,13 @@ div.vision_card:hover .vision_card__title {
     opacity: 1;
   }
 }
+
+@media(max-width:600px)
+{
+ .row.card{
+   
+    box-shadow: none !important;
+    border:none;
+    width:100%;
+ } 
+}

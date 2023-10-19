@@ -50,7 +50,7 @@ export default function Contact() {
             }}
           >
             <div className="col-md-4 mb-5 mt-4 contact_logo">
-              <img src="./img/gdsc_form.svg" className="img-fluid" alt="..." />
+              <img src="./img/logo.png" className="img-fluid" alt="..." />
             </div>
 
             <div
