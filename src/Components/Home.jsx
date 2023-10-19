@@ -105,12 +105,7 @@ export default function Home() {
       </div>
       <hr style={{margin:"0px",padding:"0px"}} ></hr>
       <Footer />
-      <ScrollToTopButton />
-     
-     
-  
-      
-     
+      <ScrollToTopButton />              
     </>
   );
 }
