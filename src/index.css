@@ -392,19 +392,18 @@ div.vision_card:hover .vision_card__title {
 
 @media(max-width:600px)
 {
- .row.card{
-   
+  .row.card{
     box-shadow: none !important;
     border:none;
     width:100%;
- } 
+  } 
 }
 
 /* `sm` applies to x-small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) { 
+@media (max-width: 575.98px) 
+{ 
   footer{
     flex-direction: column;
     gap: 6rem;
   }
-
- }
+}
