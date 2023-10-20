@@ -90,7 +90,7 @@ export default function Team() {
 
     const fetchTeamData = async () => {
       try {
-        const cachedData = localStorage.getItem('teamDatav1.0.0');
+        const cachedData = localStorage.getItem('teamDatav1.0.1');
 
         if (cachedData) {
           const parsedData = JSON.parse(cachedData);
@@ -149,7 +149,7 @@ export default function Team() {
               {
                 img: `${files[33].url}`,
                 name: "Ahana Sadh",
-                domain: "Editorial & Event Management",
+                domain: "Editorial",
                 twitter: "https://john",
                 insta: "https://john",
                 linkedin: "https://john",
@@ -165,7 +165,7 @@ export default function Team() {
               {
                 img: `${files[36].url}`,
                 name: "Namrata Parbat",
-                domain: "Head of Operations",
+                domain: "Event Management",
                 twitter: "https://john",
                 insta: "https://john",
                 linkedin: "https://john",
@@ -178,17 +178,49 @@ export default function Team() {
                 insta: "https://john",
                 linkedin: "https://john",
               },
-            ];
-
-            CoreTeamData = [
               {
                 img: `${files[20].url}`,
                 name: "Toshith Yadav",
-                domain: "Web Development",
+                domain: "Web Development CO-LEAD",
                 twitter: "https://john",
                 insta: "https://john",
                 linkedin: "https://john",
               },
+              {
+                img: `${files[9].url}`,
+                name: "Sneha Supriya",
+                domain: "AI/ML CO-LEAD",
+                twitter: "https://john",
+                insta: "https://john",
+                linkedin: "https://john",
+              },
+              {
+                img: `${files[10].url}`,
+                name: "Manasvi Gupta",
+                domain: "Event Management CO LEAD",
+                twitter: "https://john",
+                insta: "https://john",
+                linkedin: "https://john",
+              },
+              {
+                img: `${files[30].url}`,
+                name: "Ashmita Sen Roy",
+                domain: "Editorial CO LEAD",
+                twitter: "https://john",
+                insta: "https://john",
+                linkedin: "https://john",
+              },
+              {
+                img: `${files[22].url}`,
+                name: "Sparsh Ranjan",
+                domain: "PR CO LEAD",
+                twitter: "https://john",
+                insta: "https://john",
+                linkedin: "https://john",
+              },
+            ];
+
+            CoreTeamData = [
               {
                 img: `${files[13].url}`,
                 name: "Seedorf Rai",
@@ -209,14 +241,6 @@ export default function Team() {
                 img: `${files[32].url}`,
                 name: "Madhurya Hait",
                 domain: "Web Development",
-                twitter: "https://john",
-                insta: "https://john",
-                linkedin: "https://john",
-              },
-              {
-                img: `${files[9].url}`,
-                name: "Sneha Supriya",
-                domain: "AI/ML",
                 twitter: "https://john",
                 insta: "https://john",
                 linkedin: "https://john",
@@ -334,17 +358,9 @@ export default function Team() {
                 linkedin: "https://john",
               },
               {
-                img: `${files[30].url}`,
-                name: "Ashmita Sen Roy",
-                domain: "Event Management & Editorial",
-                twitter: "https://john",
-                insta: "https://john",
-                linkedin: "https://john",
-              },
-              {
                 img: `${files[14].url}`,
                 name: "Ritusree Das",
-                domain: "Event Management & Editorial",
+                domain: "Editorial",
                 twitter: "https://john",
                 insta: "https://john",
                 linkedin: "https://john",
@@ -352,15 +368,7 @@ export default function Team() {
               {
                 img: `${files[8].url}`,
                 name: "Andre Antony Andrew",
-                domain: "Event Management & Editorial",
-                twitter: "https://john",
-                insta: "https://john",
-                linkedin: "https://john",
-              },
-              {
-                img: `${files[10].url}`,
-                name: "Manasvi Gupta",
-                domain: "Head of Operations",
+                domain: "Editorial",
                 twitter: "https://john",
                 insta: "https://john",
                 linkedin: "https://john",
@@ -368,7 +376,7 @@ export default function Team() {
               {
                 img: `${files[21].url}`,
                 name: "Torsha Guha",
-                domain: "Head of Operations",
+                domain: "Event Management",
                 twitter: "https://john",
                 insta: "https://john",
                 linkedin: "https://john",
@@ -376,7 +384,7 @@ export default function Team() {
               {
                 img: `${files[16].url}`,
                 name: "Adrija Chakrabarti",
-                domain: "Head of Operations",
+                domain: "Event Management",
                 twitter: "https://john",
                 insta: "https://john",
                 linkedin: "https://john",
@@ -384,7 +392,7 @@ export default function Team() {
               {
                 img: `${files[18].url}`,
                 name: "Aaryan Pradhan",
-                domain: "Head of Operations",
+                domain: "Event Management",
                 twitter: "https://john",
                 insta: "https://john",
                 linkedin: "https://john",
@@ -392,7 +400,7 @@ export default function Team() {
               {
                 img: `${files[11].url}`,
                 name: "Ayush singh",
-                domain: "Head of Operations",
+                domain: "Event Management",
                 twitter: "https://john",
                 insta: "https://john",
                 linkedin: "https://john",
@@ -402,7 +410,7 @@ export default function Team() {
             leadImg = `${files[35].url}`;
 
             // Cache the data in local storage
-            localStorage.setItem('teamDatav1.0.0', JSON.stringify({
+            localStorage.setItem('teamDatav1.0.1', JSON.stringify({
               domainLeadsData,
               CoreTeamData,
               leadImg

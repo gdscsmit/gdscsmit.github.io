@@ -17,7 +17,6 @@ export default function Navbar() {
         maxHeight: isNavOpen ? '350px' : '90px',
         overflow: 'hidden',
         padding:'1% 2%',
-         
     };
 
     const navBrandStyle = {
