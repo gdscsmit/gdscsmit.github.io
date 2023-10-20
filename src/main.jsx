@@ -8,6 +8,7 @@ import BlogPage from "./Components/BlogPage.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import Blog from "./Components/Blog.jsx";
+import Projects  from "./Components/Projects.jsx";
 
 const MyApp = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const MyApp = createBrowserRouter([
     path: "/blogs/:id",
     element: <Blog />,
   },
+  {
+    path:"/projects",
+    element: <Projects />,
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
