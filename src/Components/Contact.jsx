@@ -9,6 +9,7 @@ export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [showModal, setShowModal] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -23,7 +24,7 @@ export default function Contact() {
       })
       .catch((error) => console.error("error submitting data :", error));
 
-    alert("Sent Successfully!");
+    setShowModal(true);
   };
 
   useEffect(() => {
@@ -128,6 +129,38 @@ export default function Contact() {
           <Footer />
         </>
       )}
+      {showModal && (
+            <div className="modal fade show" style={{ display: "block" }}>
+              <div
+                className={`modal-dialog modal-dialog-centered ${
+                  window.innerWidth < 768 ? "modal-sm" : "modal-md"
+                } fade-in`}
+              >
+                <div className="modal-content">
+                  <div className="modal-header">
+                    <h5 className="modal-title">Message Sent Successfully</h5>
+                    <button
+                      type="button"
+                      className="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                      onClick={() => setShowModal(false)}
+                    ></button>
+                  </div>
+                  <div className="modal-footer">
+                    <button
+                      type="button"
+                      className="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                      onClick={() => setShowModal(false)}
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
     </>
   );
 }

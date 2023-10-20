@@ -354,6 +354,17 @@ div.vision_card:hover .vision_card__title {
   background-color: #0056b3;
 }
 
+.fade-in {
+  animation: fade-in-animation 0.2s;
+}
+
+@keyframes fade-in-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 @media (max-width: 1024px) {
   /* Adjust the width (1024px) as needed */
   .Links {
