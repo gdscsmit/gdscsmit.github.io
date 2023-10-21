@@ -38,7 +38,7 @@ To run the website locally, follow these steps:
 
 - Clone the repository:
 ```bash
-git clone https://github.com/gdsc-organization/gdsc-website.git
+git clone https://github.com/gdscsmit/gdscsmit.github.io.git
 ```
 - Navigate to the project directory:
 ```bash
