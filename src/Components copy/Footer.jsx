@@ -14,21 +14,10 @@ const Component = styled("div")`
   line-height: 100px;
   border-radius: 100px;
   line-height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
   font-size: 30px;
   overflow: hidden;
   transition: all 0.3s ease-out;
-  & > span {
-    display: none;
-  }
-  &:hover > svg {
-    display: none;
-  }
-  &:hover > span {
-    display: inline;
-  }
   &:hover {
     width: 180px;
     display: flex;
@@ -71,13 +60,13 @@ const Footer = () => {
       </div>
 
       <div className="text-center" style={{ display: "flex", gap: "20px", position: "absolute" }}>
-        <Instagram
+        <Instagram className="text-center"
           onClick={() => {
             window.location = "https://www.instagram.com/gdscsmit/";
           }}
         >
           <BsInstagram
-            style={{ color: "#d62976" }}
+            style={{ color: "#d62976 ", marginBottom: "55px" }}
           ></BsInstagram>
           <span className="text-center" style={{ color: "white" }}>Instagram</span>
         </Instagram>
@@ -89,7 +78,7 @@ const Footer = () => {
           }}
         >
           <FaGithub className="text-center"
-            style={{ color: "black" }}
+            style={{ color: "black", marginBottom: "55px" }}
           ></FaGithub>
           <span className="text-center" style={{ color: "white" }}>GitHub</span>
         </Github>
@@ -101,7 +90,7 @@ const Footer = () => {
           }}
         >
           <FaLinkedin className="text-center"
-            style={{ color: "#0A66C2" }}
+            style={{ color: "#0A66C2", marginBottom: "55px" }}
           ></FaLinkedin>
           <span className="text-center" style={{ color: "white" }}>LinkedIn</span>
         </LinkedIn>

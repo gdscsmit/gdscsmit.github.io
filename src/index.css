@@ -354,6 +354,42 @@ div.vision_card:hover .vision_card__title {
   background-color: #0056b3;
 }
 
+.fade-in {
+  animation: fade-in-animation 0.2s;
+}
+
+@keyframes fade-in-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 1024px) {
+  /* Adjust the width (1024px) as needed */
+  .Links {
+    flex-direction: column;
+    align-items:center;
+    gap: 0px;
+  }
+}
+
+/* CustomList.css */
+.custom-list {
+  list-style: none; 
+  font-size: 12px;;/* Remove the default bullet points */
+}
+
+.custom-list li{
+  cursor: pointer;
+}
+
+.custom-list li::before {
+  content: ">"; /* Use the > symbol as the custom marker */
+  margin-right: 5px; /* Add some spacing between the marker and the list item text */
+}
+
 @media(max-width:600px)
 {
  .row.card{
@@ -363,3 +399,12 @@ div.vision_card:hover .vision_card__title {
     width:100%;
  } 
 }
+
+/* `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+  footer{
+    flex-direction: column;
+    gap: 6rem;
+  }
+
+ }
