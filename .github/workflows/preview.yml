@@ -25,7 +25,7 @@ jobs:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
           npm install -g vercel
-          vercel deploy --target preview
+          vercel deploy --target preview --token $VERCEL_TOKEN 
           export DEPLOYMENT_URL=$(vercel --json list | jq -r '.[0].url')
 
         # Comment on the pull request with the deployment URL
