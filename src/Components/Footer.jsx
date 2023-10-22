@@ -1,9 +1,8 @@
 import React from "react";
 import { styled } from "@mui/material";
-import {Link} from "react-router-dom"
-import { FaGithub } from "react-icons/fa";
+import { Link } from "react-router-dom"
+import { FaGithub,FaLinkedin } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
-import { FaLinkedin } from "react-icons/fa";
 
 const Component = styled("div")`
   padding: 10px;

@@ -126,6 +126,7 @@ export default function Contact() {
               </div>
             </div>
           </div>
+          {/* footer  */}
           <Footer />
         </>
       )}
