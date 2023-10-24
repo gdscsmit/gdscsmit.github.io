@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import AOS from 'aos';
 import Box from "@mui/material/Box";
-import { Link, redirect } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
+import Navbar from './Navbar'
+import Footer from './Footer'
 
 const Projects = () => {
   useEffect(() => {
@@ -40,21 +41,23 @@ const Projects = () => {
   ];
 
   return (
+    <>
+    <Navbar/>
     <Box
       display="flex"
       flexWrap="wrap"
       justifyContent="center"
       alignItems="center"
-      p={4} // Add padding as needed
+      p={4} 
     >
       {projects.map(({ id, TechStack, description, classes, Redirect ,image }) => (
         <Box
           key={id}
           className="vision_card rounded my-2 mx-2 w-100 border border-light-subtle " data-aos="fade-up" data-aos-duration='1000'
-          maxWidth="300px" // Set a maximum width as needed
+          maxWidth="300px" 
            
           style={{height:"450px"}}
-          m={2} // Add margin as needed
+          m={2} 
         >
           <Link to={Redirect}  style={{color:"black",textDecoration:"none",}}  >
             <div className="mt-4 mx-4 d-flex flex-column">
@@ -74,6 +77,8 @@ const Projects = () => {
         </Box>
       ))}
     </Box>
+    <Footer/>
+    </>
   );
 };
 export default Projects;
