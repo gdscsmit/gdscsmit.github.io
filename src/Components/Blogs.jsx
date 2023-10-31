@@ -50,12 +50,12 @@ export default function Blogs() {
               </font>
             </strong>
           </div>
-          <div className="my-5">
+          <div className="my-5 blogsContainer">
             {blogs.map((blog) => (
               <div
                 key={blog.id}
                 className="card text-center shadow mx-auto p-4"
-                style={{ width: "35rem", marginBottom: "3rem" }}
+                style={{ maxWidth : "35rem", marginBottom: "3rem" }}
               >
                 <div className="w-100 d-flex mb-4">
                   <h3

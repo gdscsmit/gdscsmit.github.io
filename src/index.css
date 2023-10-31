@@ -126,6 +126,13 @@
 	bottom: 0;
 }
 
+@media (max-width : 450px) {
+	.blogsContainer{
+		 padding-left: .25rem;
+		 padding-right: .25rem;
+	}
+	
+}
 .blog-content {
 	overflow: hidden;
 	text-overflow: ellipsis;
