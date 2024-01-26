@@ -41,6 +41,9 @@ export default function Navbar() {
                                 aria-current="page" onClick={closeNavbar}>
                                 Home
                             </Link>
+                            <Link to='/events' className="text-black fw-bold nav-link active link-hover-effect link-Team" aria-current="page" onClick={closeNavbar}>
+                                Events
+                            </Link>
                             <Link to='/app' className="text-black fw-bold nav-link active link-App " aria-current="page" onClick={closeNavbar}>
                                 App
                             </Link>
