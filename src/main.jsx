@@ -5,10 +5,11 @@ import MobileApp from "./Components/MobileApp";
 import Contact from "./Components/Contact.jsx";
 import Team from "./Components/Team.jsx";
 import BlogPage from "./Components/BlogPage.jsx";
+import Events from "./Components/Events.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import Blog from "./Components/Blog.jsx";
-import Projects  from "./Components/Projects.jsx";
+import Projects from "./Components/Projects.jsx";
 
 const MyApp = createBrowserRouter([
   {
@@ -36,9 +37,13 @@ const MyApp = createBrowserRouter([
     element: <Blog />,
   },
   {
-    path:"/projects",
+    path: "/projects",
     element: <Projects />,
-  }
+  },
+  {
+    path: "/events",
+    element: <Events />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
